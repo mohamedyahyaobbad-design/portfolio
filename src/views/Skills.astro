@@ -9,7 +9,7 @@ import { label, levels, localize, routes, skillCategories, ui, type Lang } from 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const L = ui[lang];
-const S = localize<any>(seo, lang);
+const S = localize(seo, lang);
 const skills = await getSkills();
 const tools = await getTools();
 const groupIcon: Record<string, string> = { seo: 'search', ads: 'ads', ecommerce: 'cart', cms: 'web', analytics: 'chart', research: 'eye', design: 'pen', autre: 'layers' };
@@ -62,7 +62,7 @@ const title = lang === 'fr' ? 'Compétences & outils' : 'Skills & tools';
             <h3 class="muted reveal" style="font-size:.85rem;text-transform:uppercase;letter-spacing:.1em">{g[lang]}</h3>
             <div class="tool-grid">
               {g.items.map((t) => {
-                const T = localize<any>(t.data, lang);
+                const T = localize(t.data, lang);
                 return (
                   <div class="card tool-card reveal">
                     <ToolLogo name={t.data.name} logo={t.data.logo} />

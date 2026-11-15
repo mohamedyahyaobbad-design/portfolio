@@ -4,7 +4,7 @@ import { localize, type Lang } from '../lib/i18n';
 import { img, srcset, initials } from '../lib/utils';
 interface Props { lang: Lang; eager?: boolean }
 const { lang, eager = false } = Astro.props;
-const P = localize<any>(profile, lang);
+const P = localize(profile, lang);
 ---
 <div class="portrait-frame">
   <div class="portrait">

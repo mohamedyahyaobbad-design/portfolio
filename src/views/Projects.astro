@@ -8,7 +8,7 @@ import { localize, projectCategories, routes, ui, type Lang } from '../lib/i18n'
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const L = ui[lang];
-const S = localize<any>(seo, lang);
+const S = localize(seo, lang);
 const projects = await getProjects();
 const used = new Set(projects.map((p) => p.data.category));
 const cats = projectCategories.filter((c) => used.has(c.id));

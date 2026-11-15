@@ -12,7 +12,7 @@ interface Props { lang: Lang; project: any }
 const { lang, project } = Astro.props;
 const L = ui[lang];
 const d = project.data;
-const T = localize<any>(d, lang);
+const T = localize(d, lang);
 const title = titleOf(d, lang);
 const cat = label(projectCategories, d.category, lang);
 const type = d.type ? projectTypes[d.type]?.[lang] : '';

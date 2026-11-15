@@ -6,13 +6,14 @@ import { initials } from '../lib/utils';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const L = ui[lang];
-const P = localize<any>(profile, lang);
-const C = localize<any>(contact, lang);
+const P = localize(profile, lang);
+const C = localize(contact, lang);
 const socials = [
   ...(contact.linkedin ? [{ label: 'LinkedIn', url: contact.linkedin }] : []),
   ...((contact.socials as any[]) ?? []).filter((s) => s?.url),
 ];
 const year = new Date().getFullYear();
+const navKeys = ['about', 'services', 'projects', 'skills', 'contact'] as const;
 ---
 <footer class="site-footer">
   <div class="container">
@@ -28,7 +29,7 @@ const year = new Date().getFullYear();
       <div>
         <h2>Navigation</h2>
         <ul>
-          {(['about', 'services', 'projects', 'skills', 'contact'] as const).map((k) => (
+          {navKeys.map((k) => (
             <li><a href={routes[k][lang]}>{L.nav[k]}</a></li>
           ))}
         </ul>

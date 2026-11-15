@@ -10,9 +10,9 @@ import { hasText, md } from '../lib/utils';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const L = ui[lang];
-const A = localize<any>(about, lang);
-const P = localize<any>(profile, lang);
-const C = localize<any>(contact, lang);
+const A = localize(about, lang);
+const P = localize(profile, lang);
+const C = localize(contact, lang);
 const cv = (lang === 'en' && profile.cv_en) || profile.cv_fr || profile.cv_en;
 const skills = (await getSkills()).slice(0, 14);
 const blocks = [

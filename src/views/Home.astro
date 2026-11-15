@@ -12,10 +12,10 @@ import { img } from '../lib/utils';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const L = ui[lang];
-const H = localize<any>(home, lang);
-const P = localize<any>(profile, lang);
-const C = localize<any>(contact, lang);
-const S = localize<any>(seo, lang);
+const H = localize(home, lang);
+const P = localize(profile, lang);
+const C = localize(contact, lang);
+const S = localize(seo, lang);
 
 const projects = await getProjects();
 const featured = (projects.filter((p) => p.data.featured).length ? projects.filter((p) => p.data.featured) : projects).slice(0, 3);
@@ -53,7 +53,7 @@ const jsonld = {
         {H.hero_intro && <p class="lead">{H.hero_intro}</p>}
         {H.domains?.length > 0 && (
           <ul class="chips hero-domains" aria-label={lang === 'fr' ? 'Domaines' : 'Areas'}>
-            {H.domains.map((d: string) => <li class="chip">{d}</li>)}
+            {H.domains.map((d) => <li class="chip">{d}</li>)}
           </ul>
         )}
         <div class="btn-row">
@@ -128,7 +128,7 @@ const jsonld = {
         </div>
         <div class="grid grid-3">
           {services.map((s) => {
-            const T = localize<any>(s.data, lang);
+            const T = localize(s.data, lang);
             return (
               <a class="card service-card reveal" href={`${routes.services[lang]}#${s.id}`} style="text-decoration:none">
                 <ServiceIcon icon={s.data.icon} image={s.data.image} />
@@ -149,7 +149,7 @@ const jsonld = {
         <div class="section-head reveal"><div><p class="eyebrow">{L.testimonials}</p><h2 id="testimonials-title">{lang === 'fr' ? 'Ils en parlent' : 'What people say'}</h2></div></div>
         <div class="grid grid-3">
           {testimonials.map((t) => {
-            const T = localize<any>(t.data, lang);
+            const T = localize(t.data, lang);
             return (
               <figure class="card testimonial reveal">
                 <blockquote>« {T.quote} »</blockquote>

@@ -213,10 +213,10 @@ export const ui = {
 const filled = (v: unknown) => v !== null && v !== undefined && v !== '' && !(Array.isArray(v) && v.length === 0);
 
 /** Fusionne le contenu FR et EN : en anglais, chaque champ vide retombe sur la version française. */
-export function localize<T extends Record<string, any>>(data: { fr?: any; en?: any } | null | undefined, lang: Lang): T {
+export function localize(data: { fr?: any; en?: any } | null | undefined, lang: Lang): any {
   const fr = (data?.fr ?? {}) as Record<string, any>;
-  if (lang === 'fr') return fr as T;
+  if (lang === 'fr') return fr;
   const out: Record<string, any> = { ...fr };
   for (const [k, v] of Object.entries((data?.en ?? {}) as Record<string, any>)) if (filled(v)) out[k] = v;
-  return out as T;
+  return out;
 }

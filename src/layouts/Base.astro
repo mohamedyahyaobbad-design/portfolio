@@ -18,7 +18,7 @@ interface Props {
 }
 const { lang, title, description, path, altPath, image, jsonld, noindex = false } = Astro.props;
 const site = Astro.site!;
-const S = localize<any>(seo, lang);
+const S = localize(seo, lang);
 const fullTitle = title.includes(profile.name) ? title : `${title} | ${profile.name}`;
 const desc = description || S.description;
 const abs = (p: string) => new URL(p, site).href;

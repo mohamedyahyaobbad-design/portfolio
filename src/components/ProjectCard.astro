@@ -7,7 +7,7 @@ import { img, srcset } from '../lib/utils';
 interface Props { project: any; lang: Lang; headingLevel?: 'h2' | 'h3' }
 const { project, lang, headingLevel = 'h3' } = Astro.props;
 const d = project.data;
-const T = localize<any>(d, lang);
+const T = localize(d, lang);
 const title = titleOf(d, lang);
 const href = projectUrl(lang, project.id);
 const cat = label(projectCategories, d.category, lang);

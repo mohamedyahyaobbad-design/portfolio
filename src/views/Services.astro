@@ -10,7 +10,7 @@ import { list } from '../lib/utils';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const L = ui[lang];
-const S = localize<any>(seo, lang);
+const S = localize(seo, lang);
 const services = await getServices();
 const title = lang === 'fr' ? 'Services en marketing digital' : 'Digital marketing services';
 ---
@@ -28,7 +28,7 @@ const title = lang === 'fr' ? 'Services en marketing digital' : 'Digital marketi
   <section class="section section--tight">
     <div class="container">
       {services.map((s) => {
-        const T = localize<any>(s.data, lang);
+        const T = localize(s.data, lang);
         const prest = list(T.prestations);
         const deliv = list(T.deliverables);
         return (

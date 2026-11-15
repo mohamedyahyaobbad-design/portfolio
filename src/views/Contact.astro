@@ -8,8 +8,8 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const L = ui[lang];
 const F = L.form;
-const C = localize<any>(contact, lang);
-const S = localize<any>(seo, lang);
+const C = localize(contact, lang);
+const S = localize(seo, lang);
 const cv = (lang === 'en' && profile.cv_en) || profile.cv_fr || profile.cv_en;
 const socials = ((contact.socials as any[]) ?? []).filter((s) => s?.url);
 const title = lang === 'fr' ? 'Contact' : 'Contact';
