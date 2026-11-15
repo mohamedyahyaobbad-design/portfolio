@@ -1,0 +1,15 @@
+{
+  "name": "Semrush",
+  "logo": "",
+  "category": "seo",
+  "level": "",
+  "url": "https://www.semrush.com",
+  "visible": true,
+  "order": 110,
+  "fr": {
+    "description": "Recherche de mots-clés, suivi des positions et analyse de la concurrence."
+  },
+  "en": {
+    "description": "Keyword research, rank tracking and competitive analysis."
+  }
+}
