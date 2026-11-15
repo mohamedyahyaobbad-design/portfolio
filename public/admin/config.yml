@@ -162,7 +162,7 @@ collections:
     fields:
       - { label: "Nom de l’outil", name: name, widget: string }
       - { label: "Logo", name: logo, widget: image, required: false, choose_url: false, hint: "Format carré, idéalement SVG ou PNG transparent. Sans logo, les initiales sont affichées." }
-      - { label: "Catégorie", name: category, widget: select, options: &skill_categories [{ label: "SEO", value: "seo" }, { label: "Publicité en ligne (Ads)", value: "ads" }, { label: "E-commerce", value: "ecommerce" }, { label: "Web & CMS", value: "cms" }, { label: "Analyse & Reporting", value: "analytics" }, { label: "Recherche & Veille", value: "research" }, { label: "Design & Communication", value: "design" }, { label: "Autres", value: "autre" }] }
+      - { label: "Catégorie", name: category, widget: select, options: &skill_categories [{ label: "SEO", value: "seo" }, { label: "Publicité en ligne (Ads)", value: "ads" }, { label: "Réseaux sociaux", value: "social" }, { label: "E-commerce", value: "ecommerce" }, { label: "Web & CMS", value: "cms" }, { label: "Analyse & Reporting", value: "analytics" }, { label: "Recherche & Veille", value: "research" }, { label: "Design & Communication", value: "design" }, { label: "Autres", value: "autre" }] }
       - { label: "Niveau de maîtrise (facultatif)", name: level, widget: select, required: false, options: &levels [{ label: "Notions", value: "notions" }, { label: "Intermédiaire", value: "intermediaire" }, { label: "Avancé", value: "avance" }, { label: "Expert", value: "expert" }], hint: "Laissez vide pour ne pas afficher de niveau." }
       - { label: "Site officiel (facultatif)", name: url, widget: string, required: false }
       - { label: "Afficher sur le site", name: visible, widget: boolean, default: true }

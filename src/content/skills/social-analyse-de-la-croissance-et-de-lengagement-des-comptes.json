@@ -1,0 +1,10 @@
+{
+  "name": "Analyse de la croissance et de l’engagement des comptes",
+  "category": "social",
+  "level": "",
+  "visible": true,
+  "order": 30,
+  "en": {
+    "name": "Account growth & engagement analysis"
+  }
+}

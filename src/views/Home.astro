@@ -26,7 +26,7 @@ const testimonials = await getTestimonials();
 const skillGroups = skillCategories
   .map((c) => ({ ...c, items: skills.filter((s) => (s.data.category ?? 'autre') === c.id) }))
   .filter((g) => g.items.length);
-const groupIcon: Record<string, string> = { seo: 'search', ads: 'ads', ecommerce: 'cart', cms: 'web', analytics: 'chart', research: 'eye', design: 'pen', autre: 'layers' };
+const groupIcon: Record<string, string> = { seo: 'search', ads: 'ads', social: 'meta', ecommerce: 'cart', cms: 'web', analytics: 'chart', research: 'eye', design: 'pen', autre: 'layers' };
 
 const site = Astro.site!;
 const sameAs = [contact.linkedin, ...((contact.socials as any[]) ?? []).map((s) => s?.url)].filter(Boolean);

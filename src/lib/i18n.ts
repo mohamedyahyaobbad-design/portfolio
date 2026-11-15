@@ -38,6 +38,7 @@ export const projectTypes: Record<string, { fr: string; en: string }> = {
 export const skillCategories: { id: string; fr: string; en: string }[] = [
   { id: 'seo', fr: 'SEO', en: 'SEO' },
   { id: 'ads', fr: 'Publicité en ligne', en: 'Paid Advertising' },
+  { id: 'social', fr: 'Réseaux sociaux', en: 'Social Media' },
   { id: 'ecommerce', fr: 'E-commerce', en: 'E-commerce' },
   { id: 'cms', fr: 'Web & CMS', en: 'Web & CMS' },
   { id: 'analytics', fr: 'Analyse & Reporting', en: 'Analytics & Reporting' },

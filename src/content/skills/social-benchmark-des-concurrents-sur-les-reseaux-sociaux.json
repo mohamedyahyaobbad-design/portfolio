@@ -1,0 +1,10 @@
+{
+  "name": "Benchmark des concurrents sur les réseaux sociaux",
+  "category": "social",
+  "level": "",
+  "visible": true,
+  "order": 20,
+  "en": {
+    "name": "Competitor benchmarking on social media"
+  }
+}

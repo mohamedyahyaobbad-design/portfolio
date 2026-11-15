@@ -1,0 +1,10 @@
+{
+  "name": "Benchmark concurrentiel de sites web",
+  "category": "research",
+  "level": "",
+  "visible": true,
+  "order": 10,
+  "en": {
+    "name": "Competitor website benchmarking"
+  }
+}
