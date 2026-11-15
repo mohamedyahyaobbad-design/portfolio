@@ -7,9 +7,9 @@ backend:
   name: github
   repo: mohamedyahyaobbad-design/portfolio
   branch: main
-  # Connexion GitHub via le fournisseur OAuth installé sur le projet Netlify
-  base_url: https://api.netlify.com
-  site_domain: mohamed-yahya-obbad.netlify.app
+  # Connexion GitHub via les fonctions Cloudflare du site (functions/api/auth.js et callback.js)
+  base_url: https://mohamed-yahya-obbad.pages.dev
+  auth_endpoint: api/auth
   commit_messages:
     create: "Ajout : {{collection}} « {{slug}} »"
     update: "Mise à jour : {{collection}} « {{slug}} »"
