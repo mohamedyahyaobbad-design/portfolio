@@ -14,6 +14,13 @@ backend:
     uploadMedia: "Ajout du média « {{path}} »"
     deleteMedia: "Suppression du média « {{path}} »"
 
+# Mode brouillon : les modifications sont enregistrées sans coût (brouillon + aperçu gratuit),
+# puis mises en ligne en une seule publication depuis l'onglet « Flux éditorial ».
+publish_mode: editorial_workflow
+show_preview_links: true
+site_url: https://mohamed-yahya-obbad.netlify.app
+display_url: https://mohamed-yahya-obbad.netlify.app
+
 locale: fr
 logo_url: /favicon.svg
 media_folder: public/uploads
