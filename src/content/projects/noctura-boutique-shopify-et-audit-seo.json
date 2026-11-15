@@ -48,6 +48,12 @@
       "label_en": "Visit the online store",
       "url": "https://noctura-sleep-store.myshopify.com/",
       "kind": "link"
+    },
+    {
+      "label": "Voir la campagne Meta Ads de notoriété",
+      "label_en": "See the Meta Ads awareness campaign",
+      "url": "/projets/noctura-campagne-meta-ads-notoriete/",
+      "kind": "link"
     }
   ],
   "fr": {
