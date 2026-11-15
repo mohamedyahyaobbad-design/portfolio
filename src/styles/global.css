@@ -183,9 +183,9 @@ ul, ol { padding-left: 1.2em; }
 .cover-placeholder { width: 100%; height: 100%; display: grid; place-items: center; background: linear-gradient(135deg, var(--dark) 0%, #1c2b52 100%); color: rgb(255 255 255 / 0.9); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em; padding: 1rem; text-align: center; }
 .project-body { padding: 1.35rem 1.4rem 1.5rem; display: flex; flex-direction: column; gap: 0.7rem; flex: 1; }
 .project-meta { display: flex; gap: 0.45rem; flex-wrap: wrap; }
-.project-card h3 { margin: 0; font-size: 1.18rem; }
-.project-card h3 a { color: var(--text); text-decoration: none; }
-.project-card h3 a::after { content: ''; position: absolute; inset: 0; }
+.project-card :is(h2, h3) { margin: 0; font-size: 1.18rem; letter-spacing: -0.02em; line-height: 1.3; }
+.project-card :is(h2, h3) a { color: var(--text); text-decoration: none; }
+.project-card :is(h2, h3) a::after { content: ''; position: absolute; inset: 0; }
 .project-card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
 .project-card .link-arrow { margin-top: auto; padding-top: 0.4rem; }
 
