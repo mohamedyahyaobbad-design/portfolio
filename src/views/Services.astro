@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import ServiceIcon from '../components/ServiceIcon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { getServices, seo, titleOf } from '../lib/content';
+import { localize, routes, ui, type Lang } from '../lib/i18n';
+import { list } from '../lib/utils';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const L = ui[lang];
+const S = localize<any>(seo, lang);
+const services = await getServices();
+const title = lang === 'fr' ? 'Services en marketing digital' : 'Digital marketing services';
+---
+<Base lang={lang} title={title} description={S.services_description} path={routes.services[lang]} altPath={routes.services[lang === 'fr' ? 'en' : 'fr']}>
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">{L.nav.services}</p>
+      <h1>{title}</h1>
+      <p class="lead">{lang === 'fr'
+        ? 'Pour chaque besoin : le problème que vous rencontrez, la solution que je propose, ce qui est inclus et ce que vous recevez.'
+        : 'For each need: the problem you face, the solution I offer, what’s included and what you get.'}</p>
+    </div>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container">
+      {services.map((s) => {
+        const T = localize<any>(s.data, lang);
+        const prest = list(T.prestations);
+        const deliv = list(T.deliverables);
+        return (
+          <article class="card service-detail reveal" id={s.id}>
+            <div>
+              <ServiceIcon icon={s.data.icon} image={s.data.image} />
+              <h2>{titleOf(s.data, lang)}</h2>
+              {T.description && <p class="muted">{T.description}</p>}
+              <a class="btn btn--primary" href={`${routes.contact[lang]}?type=freelance`}>{T.cta_label || L.contactMe} <Icon name="arrow" /></a>
+            </div>
+            <div class="service-blocks">
+              {T.problem && <div class="service-block"><h3>{L.problem}</h3><p>{T.problem}</p></div>}
+              {T.solution && <div class="service-block"><h3>{L.solution}</h3><p>{T.solution}</p></div>}
+              {prest.length > 0 && <div class="service-block"><h3>{L.prestations}</h3><ul>{prest.map((p) => <li>{p}</li>)}</ul></div>}
+              {deliv.length > 0 && <div class="service-block"><h3>{L.deliverables}</h3><ul>{deliv.map((p) => <li>{p}</li>)}</ul></div>}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <CtaBand lang={lang} />
+</Base>

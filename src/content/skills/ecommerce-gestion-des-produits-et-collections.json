@@ -1,0 +1,10 @@
+{
+  "name": "Gestion des produits et collections",
+  "category": "ecommerce",
+  "level": "",
+  "visible": true,
+  "order": 30,
+  "en": {
+    "name": "Product & collection management"
+  }
+}

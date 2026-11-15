@@ -1,0 +1,15 @@
+{
+  "name": "Wappalyzer",
+  "logo": "",
+  "category": "research",
+  "level": "",
+  "url": "https://www.wappalyzer.com",
+  "visible": true,
+  "order": 60,
+  "fr": {
+    "description": "Identification des technologies utilisées par un site web."
+  },
+  "en": {
+    "description": "Identifies the technologies a website is built with."
+  }
+}

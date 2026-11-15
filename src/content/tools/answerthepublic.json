@@ -1,0 +1,15 @@
+{
+  "name": "AnswerThePublic",
+  "logo": "",
+  "category": "seo",
+  "level": "",
+  "url": "https://answerthepublic.com",
+  "visible": true,
+  "order": 70,
+  "fr": {
+    "description": "Exploration des questions et recherches des internautes autour d’un mot-clé."
+  },
+  "en": {
+    "description": "Explores the questions and searches people make around a keyword."
+  }
+}

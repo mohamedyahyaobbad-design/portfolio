@@ -1,0 +1,44 @@
+{
+  "title": "Campagnes Meta Ads",
+  "icon": "meta",
+  "image": "",
+  "visible": true,
+  "order": 30,
+  "fr": {
+    "description": "Toucher la bonne audience sur Facebook et Instagram avec des publicités qui donnent envie d’agir.",
+    "problem": "Vos publications touchent peu de monde et vous ne savez pas qui cibler ni comment mesurer les résultats.",
+    "solution": "Une analyse de vos audiences, des campagnes alignées sur votre objectif (notoriété, trafic, prospects, ventes) et un suivi des performances.",
+    "prestations": [
+      "Paramétrage de Meta Business Suite",
+      "Définition des audiences",
+      "Création des campagnes et des visuels",
+      "Suivi des performances",
+      "Recommandations d’optimisation"
+    ],
+    "deliverables": [
+      "Campagnes configurées",
+      "Audiences documentées",
+      "Rapport de performance"
+    ],
+    "cta_label": "Lancer une campagne Meta Ads"
+  },
+  "en": {
+    "title": "Meta Ads campaigns",
+    "description": "Reach the right audience on Facebook and Instagram with ads that drive action.",
+    "problem": "Your posts reach few people and you’re unsure who to target or how to measure results.",
+    "solution": "Audience analysis, campaigns aligned with your goal (awareness, traffic, leads, sales) and performance tracking.",
+    "prestations": [
+      "Meta Business Suite setup",
+      "Audience definition",
+      "Campaign and creative setup",
+      "Performance tracking",
+      "Optimisation recommendations"
+    ],
+    "deliverables": [
+      "Configured campaigns",
+      "Documented audiences",
+      "Performance report"
+    ],
+    "cta_label": "Launch a Meta Ads campaign"
+  }
+}

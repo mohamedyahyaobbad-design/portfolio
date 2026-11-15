@@ -1,0 +1,10 @@
+{
+  "name": "Shopify",
+  "category": "cms",
+  "level": "",
+  "visible": true,
+  "order": 20,
+  "en": {
+    "name": "Shopify"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Gestion et optimisation de sites web",
+  "category": "cms",
+  "level": "",
+  "visible": true,
+  "order": 30,
+  "en": {
+    "name": "Website management & optimisation"
+  }
+}

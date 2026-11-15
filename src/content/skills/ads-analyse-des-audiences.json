@@ -1,0 +1,10 @@
+{
+  "name": "Analyse des audiences",
+  "category": "ads",
+  "level": "",
+  "visible": true,
+  "order": 50,
+  "en": {
+    "name": "Audience analysis"
+  }
+}

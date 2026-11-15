@@ -1,0 +1,10 @@
+{
+  "name": "Personnalisation de thèmes Shopify",
+  "category": "ecommerce",
+  "level": "",
+  "visible": true,
+  "order": 20,
+  "en": {
+    "name": "Shopify theme customisation"
+  }
+}

@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import { routes } from '../lib/i18n';
+---
+<Base lang="fr" title="Page introuvable" path="/404/" altPath="/en/" noindex>
+  <section class="section">
+    <div class="container narrow center" style="margin-inline:auto">
+      <p class="eyebrow">Erreur 404</p>
+      <h1>Cette page n’existe pas (ou plus).</h1>
+      <p class="lead" style="margin-inline:auto">This page doesn’t exist.</p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn btn--primary" href={routes.home.fr}>Retour à l’accueil</a>
+        <a class="btn btn--ghost" href={routes.home.en}>English home</a>
+      </div>
+    </div>
+  </section>
+</Base>

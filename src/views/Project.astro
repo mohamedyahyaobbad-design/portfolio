@@ -1,0 +1,214 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { getCollection } from 'astro:content';
+import { getProjects, profile, titleOf } from '../lib/content';
+import { label, localize, projectCategories, projectTypes, projectUrl, routes, ui, type Lang } from '../lib/i18n';
+import { hasText, img, md, srcset } from '../lib/utils';
+
+interface Props { lang: Lang; project: any }
+const { lang, project } = Astro.props;
+const L = ui[lang];
+const d = project.data;
+const T = localize<any>(d, lang);
+const title = titleOf(d, lang);
+const cat = label(projectCategories, d.category, lang);
+const type = d.type ? projectTypes[d.type]?.[lang] : '';
+const other = lang === 'fr' ? 'en' : 'fr';
+
+// Outils liés (sélectionnés dans l'admin)
+const allTools = await getCollection('tools');
+const tools = ((d.tools as string[]) ?? [])
+  .map((id) => allTools.find((t) => t.id === id || t.data.name === id))
+  .filter(Boolean) as any[];
+
+const order = ['presentation', 'context', 'problem', 'objectives', 'analysis', 'methodology', 'strategy', 'work', 'results'] as const;
+const sections = order.filter((k) => hasText(T[k])).map((k) => ({ key: k, title: L.caseSections[k], html: md(T[k]) }));
+const gallery = ((d.gallery as any[]) ?? []).filter((g) => g?.image).map((g) => ({
+  src: g.image,
+  caption: lang === 'en' && hasText(g.caption_en) ? g.caption_en : g.caption ?? '',
+}));
+const links = ((d.links as any[]) ?? []).filter((l) => l?.url);
+const yt = (u: string) => {
+  const m = u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/);
+  return m ? m[1] : null;
+};
+const videos = links.map((l) => yt(l.url)).filter(Boolean) as string[];
+const otherProjects = (await getProjects()).filter((p) => p.id !== project.id).slice(0, 3);
+let n = 0;
+const num = () => String(++n).padStart(2, '0');
+
+const site = Astro.site!;
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: title,
+  description: T.summary,
+  inLanguage: lang,
+  author: { '@type': 'Person', name: profile.name },
+  url: new URL(projectUrl(lang, project.id), site).href,
+  ...(d.cover ? { image: new URL(d.cover, site).href } : {}),
+  ...(cat ? { genre: cat } : {}),
+};
+---
+<Base
+  lang={lang}
+  title={T.seo_title || title}
+  description={T.seo_description || T.summary}
+  path={projectUrl(lang, project.id)}
+  altPath={projectUrl(other, project.id)}
+  image={d.cover || undefined}
+  jsonld={jsonld}
+>
+  <header class="case-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label={lang === 'fr' ? "Fil d'Ariane" : 'Breadcrumb'}>
+        <a href={routes.home[lang]}>{L.nav.home}</a> / <a href={routes.projects[lang]}>{L.nav.projects}</a> / <span aria-current="page">{title}</span>
+      </nav>
+      <div class="project-meta" style="margin-bottom:1rem">
+        {cat && <span class="badge">{cat}</span>}
+        {type && <span class="badge badge--neutral">{type}</span>}
+      </div>
+      <h1>{title}</h1>
+      {T.summary && <p class="lead">{T.summary}</p>}
+    </div>
+  </header>
+
+  {d.cover && (
+    <div class="container" style="margin-bottom:clamp(2.5rem,6vw,4.5rem)">
+      <div class="case-cover">
+        <img src={img(d.cover, 1600)} srcset={srcset(d.cover, [640, 960, 1280, 1600, 2000])} sizes="(max-width: 1200px) 100vw, 1160px" alt={T.cover_alt || title} width="1600" height="900" fetchpriority="high" decoding="async" />
+      </div>
+    </div>
+  )}
+
+  <div class="container case-layout" style="padding-bottom:clamp(3rem,6vw,5rem)">
+    <aside class="case-aside" aria-labelledby="overview-title">
+      <h2 id="overview-title">{L.overview}</h2>
+      <dl>
+        {type && <div><dt>{L.type}</dt><dd>{type}</dd></div>}
+        {cat && <div><dt>{L.category}</dt><dd>{cat}</dd></div>}
+        {d.context_label && <div><dt>{L.context}</dt><dd>{lang === 'en' && hasText(d.context_label_en) ? d.context_label_en : d.context_label}</dd></div>}
+        {d.period && <div><dt>{L.period}</dt><dd>{d.period}</dd></div>}
+        {tools.length > 0 && (
+          <div><dt>{L.tools}</dt><dd>
+            <ul class="chips">{tools.map((t) => (
+              <li class="chip">{t.data.logo && <img src={img(t.data.logo, 48)} alt="" width="16" height="16" loading="lazy" />}{t.data.name}</li>
+            ))}</ul>
+          </dd></div>
+        )}
+      </dl>
+    </aside>
+
+    <article class="case-body">
+      {sections.map((s) => (
+        <section id={s.key}>
+          <h2><span class="num">{num()}</span>{s.title}</h2>
+          <div class="prose" set:html={s.html} />
+        </section>
+      ))}
+
+      {gallery.length > 0 && (
+        <section id="galerie">
+          <h2><span class="num">{num()}</span>{L.gallery}</h2>
+          <p class="muted" style="font-size:.92rem">{L.galleryHint}</p>
+          <div class="gallery" data-gallery>
+            {gallery.map((g, i) => (
+              <figure>
+                <button type="button" data-index={i} data-full={img(g.src, 2000)} data-caption={g.caption} aria-label={`${L.gallery} ${i + 1}/${gallery.length}${g.caption ? ` — ${g.caption}` : ''}`}>
+                  <img src={img(g.src, 640)} srcset={srcset(g.src, [320, 480, 640, 960])} sizes="(max-width: 640px) 100vw, 300px" alt={g.caption || `${title} — ${i + 1}`} loading="lazy" decoding="async" width="640" height="480" />
+                </button>
+                {g.caption && <figcaption>{g.caption}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {links.length > 0 && (
+        <section id="ressources">
+          <h2><span class="num">{num()}</span>{L.links}</h2>
+          {videos.map((id) => (
+            <div class="video-embed"><iframe src={`https://www.youtube-nocookie.com/embed/${id}`} title={title} loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          ))}
+          <ul class="resource-list">
+            {links.map((l) => (
+              <li><a href={l.url} target="_blank" rel="noopener"><Icon name={l.kind === 'video' ? 'play' : 'external'} />{(lang === 'en' && hasText(l.label_en) ? l.label_en : l.label) || l.url}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {hasText(T.conclusion) && (
+        <section id="conclusion">
+          <h2><span class="num">{num()}</span>{L.caseSections.conclusion}</h2>
+          <div class="prose" set:html={md(T.conclusion)} />
+        </section>
+      )}
+
+      <p><a class="link-arrow" href={routes.projects[lang]}><Icon name="arrow-left" /> {L.backToProjects}</a></p>
+    </article>
+  </div>
+
+  {otherProjects.length > 0 && (
+    <section class="section section--alt" aria-labelledby="other-title">
+      <div class="container">
+        <div class="section-head"><h2 id="other-title">{L.otherProjects}</h2></div>
+        <div class="grid grid-3">{otherProjects.map((p) => <ProjectCard project={p} lang={lang} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <CtaBand lang={lang} />
+
+  {gallery.length > 0 && (
+    <dialog class="lightbox" aria-label={L.lightbox} data-lightbox>
+      <div class="lightbox-inner">
+        <img alt="" data-lb-img />
+        <p data-lb-caption></p>
+      </div>
+      <button class="lb-btn lb-close" type="button" data-lb-close aria-label={L.close}><Icon name="close" /></button>
+      {gallery.length > 1 && <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label={L.prev}><Icon name="chev-left" /></button>}
+      {gallery.length > 1 && <button class="lb-btn lb-next" type="button" data-lb-next aria-label={L.next}><Icon name="chev-right" /></button>}
+    </dialog>
+  )}
+</Base>
+
+<script>
+  const dlg = document.querySelector<HTMLDialogElement>('[data-lightbox]');
+  const items = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-gallery] button'));
+  if (dlg && items.length) {
+    const imgEl = dlg.querySelector<HTMLImageElement>('[data-lb-img]')!;
+    const cap = dlg.querySelector<HTMLElement>('[data-lb-caption]')!;
+    let i = 0;
+    let opener: HTMLElement | null = null;
+    const show = (k: number) => {
+      i = (k + items.length) % items.length;
+      const b = items[i];
+      imgEl.src = b.dataset.full || '';
+      imgEl.alt = b.querySelector('img')?.alt || '';
+      cap.textContent = b.dataset.caption || '';
+    };
+    items.forEach((b, k) => b.addEventListener('click', () => { opener = b; show(k); dlg.showModal(); }));
+    dlg.querySelector('[data-lb-close]')?.addEventListener('click', () => dlg.close());
+    dlg.querySelector('[data-lb-prev]')?.addEventListener('click', () => show(i - 1));
+    dlg.querySelector('[data-lb-next]')?.addEventListener('click', () => show(i + 1));
+    dlg.addEventListener('click', (e) => { if (e.target === dlg || (e.target as HTMLElement).classList.contains('lightbox-inner')) dlg.close(); });
+    dlg.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') show(i - 1);
+      if (e.key === 'ArrowRight') show(i + 1);
+    });
+    dlg.addEventListener('close', () => { imgEl.removeAttribute('src'); opener?.focus(); });
+    // Balayage sur mobile
+    let x0: number | null = null;
+    dlg.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    dlg.addEventListener('touchend', (e) => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 50) show(dx > 0 ? i - 1 : i + 1);
+      x0 = null;
+    });
+  }
+</script>

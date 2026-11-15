@@ -1,0 +1,169 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Portrait from '../components/Portrait.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ServiceIcon from '../components/ServiceIcon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { contact, getProjects, getServices, getSkills, getTestimonials, home, nameOf, profile, seo, titleOf } from '../lib/content';
+import { label, localize, routes, skillCategories, ui, type Lang } from '../lib/i18n';
+import { img } from '../lib/utils';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const L = ui[lang];
+const H = localize<any>(home, lang);
+const P = localize<any>(profile, lang);
+const C = localize<any>(contact, lang);
+const S = localize<any>(seo, lang);
+
+const projects = await getProjects();
+const featured = (projects.filter((p) => p.data.featured).length ? projects.filter((p) => p.data.featured) : projects).slice(0, 3);
+const services = await getServices();
+const skills = await getSkills();
+const testimonials = await getTestimonials();
+
+const skillGroups = skillCategories
+  .map((c) => ({ ...c, items: skills.filter((s) => (s.data.category ?? 'autre') === c.id) }))
+  .filter((g) => g.items.length);
+const groupIcon: Record<string, string> = { seo: 'search', ads: 'ads', ecommerce: 'cart', cms: 'web', analytics: 'chart', research: 'eye', design: 'pen', autre: 'layers' };
+
+const site = Astro.site!;
+const sameAs = [contact.linkedin, ...((contact.socials as any[]) ?? []).map((s) => s?.url)].filter(Boolean);
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  jobTitle: P.job_title,
+  url: new URL(routes.home[lang], site).href,
+  ...(profile.photo ? { image: new URL(profile.photo, site).href } : {}),
+  ...(contact.email ? { email: `mailto:${contact.email}` } : {}),
+  address: { '@type': 'PostalAddress', addressLocality: 'Casablanca', addressCountry: 'MA' },
+  knowsAbout: ['SEO', 'Google Ads', 'Meta Ads', 'E-commerce', 'Shopify', 'WordPress'],
+  ...(sameAs.length ? { sameAs } : {}),
+};
+---
+<Base lang={lang} title={S.home_title} path={routes.home[lang]} altPath={routes.home[lang === 'fr' ? 'en' : 'fr']} jsonld={jsonld}>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">{P.job_title}</p>
+        <h1>{H.hero_title}</h1>
+        {H.hero_intro && <p class="lead">{H.hero_intro}</p>}
+        {H.domains?.length > 0 && (
+          <ul class="chips hero-domains" aria-label={lang === 'fr' ? 'Domaines' : 'Areas'}>
+            {H.domains.map((d: string) => <li class="chip">{d}</li>)}
+          </ul>
+        )}
+        <div class="btn-row">
+          <a class="btn btn--primary" href={routes.projects[lang]}>{L.seeProjects} <Icon name="arrow" /></a>
+          <a class="btn btn--ghost" href={routes.contact[lang]}>{L.contactMe}</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <Portrait lang={lang} eager>
+          {C.availability && (
+            <div class="portrait-card"><span class="status-dot" aria-hidden="true"></span><span>{lang === 'fr' ? 'Disponible : stage PFE & freelance' : 'Available: internship & freelance'}</span></div>
+          )}
+        </Portrait>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section class="section section--alt" aria-labelledby="featured-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">{L.nav.projects}</p>
+          <h2 id="featured-title">{L.featured}</h2>
+          <p>{L.featuredIntro}</p>
+        </div>
+        {projects.length > 0 && <a class="link-arrow" href={routes.projects[lang]}>{L.allProjects} <Icon name="arrow" /></a>}
+      </div>
+      {featured.length ? (
+        <div class="grid grid-3">{featured.map((p) => <ProjectCard project={p} lang={lang} />)}</div>
+      ) : (
+        <p class="empty">{L.noProjects}</p>
+      )}
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  {skillGroups.length > 0 && (
+    <section class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">{L.skillsTitle}</p>
+            <h2 id="skills-title">{lang === 'fr' ? 'Ce que je sais faire' : 'What I do'}</h2>
+            <p>{L.skillsIntro}</p>
+          </div>
+          <a class="link-arrow" href={routes.skills[lang]}>{L.allSkills} <Icon name="arrow" /></a>
+        </div>
+        <div class="grid grid-2">
+          {skillGroups.map((g) => (
+            <div class="card skill-group reveal">
+              <h3><span class="icon-box" aria-hidden="true"><Icon name={groupIcon[g.id] ?? 'layers'} /></span>{g[lang]}</h3>
+              <ul class="chips">{g.items.map((s) => <li class="chip">{nameOf(s.data, lang)}</li>)}</ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- SERVICES -->
+  {services.length > 0 && (
+    <section class="section section--alt" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">{L.servicesTitle}</p>
+            <h2 id="services-title">{lang === 'fr' ? 'Comment je peux vous aider' : 'How I can help'}</h2>
+            <p>{L.servicesIntro}</p>
+          </div>
+          <a class="link-arrow" href={routes.services[lang]}>{L.allServices} <Icon name="arrow" /></a>
+        </div>
+        <div class="grid grid-3">
+          {services.map((s) => {
+            const T = localize<any>(s.data, lang);
+            return (
+              <a class="card service-card reveal" href={`${routes.services[lang]}#${s.id}`} style="text-decoration:none">
+                <ServiceIcon icon={s.data.icon} image={s.data.image} />
+                <h3>{titleOf(s.data, lang)}</h3>
+                {T.description && <p>{T.description}</p>}
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- TÉMOIGNAGES (affichés seulement s'il y en a) -->
+  {testimonials.length > 0 && (
+    <section class="section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="eyebrow">{L.testimonials}</p><h2 id="testimonials-title">{lang === 'fr' ? 'Ils en parlent' : 'What people say'}</h2></div></div>
+        <div class="grid grid-3">
+          {testimonials.map((t) => {
+            const T = localize<any>(t.data, lang);
+            return (
+              <figure class="card testimonial reveal">
+                <blockquote>« {T.quote} »</blockquote>
+                <footer>
+                  {t.data.photo && <img src={img(t.data.photo, 96)} alt="" width="42" height="42" loading="lazy" />}
+                  <div><cite>{t.data.url ? <a href={t.data.url} target="_blank" rel="noopener">{t.data.name}</a> : t.data.name}</cite><span class="muted">{[T.role || t.data.role, t.data.company].filter(Boolean).join(' · ')}</span></div>
+                </footer>
+              </figure>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CtaBand lang={lang} />
+</Base>

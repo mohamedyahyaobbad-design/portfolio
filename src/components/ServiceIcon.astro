@@ -1,0 +1,8 @@
+---
+import Icon from './Icon.astro';
+interface Props { icon?: string | null; image?: string | null }
+const { icon, image } = Astro.props;
+---
+<span class="icon-box" aria-hidden="true">
+  {image ? <img src={image} alt="" width="28" height="28" loading="lazy" /> : <Icon name={icon || 'layers'} />}
+</span>

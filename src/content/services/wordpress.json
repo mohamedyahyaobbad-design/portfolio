@@ -1,0 +1,44 @@
+{
+  "title": "Sites WordPress",
+  "icon": "web",
+  "image": "",
+  "visible": true,
+  "order": 50,
+  "fr": {
+    "description": "Un site professionnel, rapide et facile à mettre à jour.",
+    "problem": "Votre site est vieillissant, lent ou difficile à modifier, et il ne génère pas de contacts.",
+    "solution": "La création ou l’optimisation de votre site WordPress : structure claire, design soigné, bases SEO et performances.",
+    "prestations": [
+      "Création ou refonte du site",
+      "Personnalisation du thème",
+      "Optimisation SEO de base",
+      "Optimisation de la vitesse",
+      "Formation à la gestion du contenu"
+    ],
+    "deliverables": [
+      "Site WordPress en ligne",
+      "Pages optimisées",
+      "Guide d’administration"
+    ],
+    "cta_label": "Discuter de mon site"
+  },
+  "en": {
+    "title": "WordPress websites",
+    "description": "A professional website that’s fast and easy to update.",
+    "problem": "Your website is outdated, slow or hard to edit, and it doesn’t bring in enquiries.",
+    "solution": "Building or optimising your WordPress site: clear structure, polished design, SEO basics and performance.",
+    "prestations": [
+      "Website creation or redesign",
+      "Theme customisation",
+      "Basic SEO optimisation",
+      "Speed optimisation",
+      "Content management training"
+    ],
+    "deliverables": [
+      "Live WordPress website",
+      "Optimised pages",
+      "Admin guide"
+    ],
+    "cta_label": "Talk about my website"
+  }
+}

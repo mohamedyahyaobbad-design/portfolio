@@ -1,0 +1,50 @@
+---
+import { routes, ui, localize, type Lang } from '../lib/i18n';
+import { profile, contact } from '../lib/content';
+import { initials } from '../lib/utils';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const L = ui[lang];
+const P = localize<any>(profile, lang);
+const C = localize<any>(contact, lang);
+const socials = [
+  ...(contact.linkedin ? [{ label: 'LinkedIn', url: contact.linkedin }] : []),
+  ...((contact.socials as any[]) ?? []).filter((s) => s?.url),
+];
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href={routes.home[lang]}>
+          <span class="brand-mark" aria-hidden="true">{initials(profile.name)}</span>
+          <span>{profile.name}</span>
+        </a>
+        <p>{P.job_title}{P.tagline ? ` — ${P.tagline}` : ''}</p>
+        {C.location && <p>{C.location}</p>}
+      </div>
+      <div>
+        <h2>Navigation</h2>
+        <ul>
+          {(['about', 'services', 'projects', 'skills', 'contact'] as const).map((k) => (
+            <li><a href={routes[k][lang]}>{L.nav[k]}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2>{L.nav.contact}</h2>
+        <ul>
+          {contact.email && <li><a href={`mailto:${contact.email}`}>{contact.email}</a></li>}
+          {socials.map((s) => <li><a href={s.url} target="_blank" rel="noopener me">{s.label}</a></li>)}
+          <li><a href={routes.contact[lang]}>{L.contactMe} →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} {profile.name}. {L.rights}</span>
+      <span>{lang === 'fr' ? <a href={routes.home.en} hreflang="en">English version</a> : <a href={routes.home.fr} hreflang="fr">Version française</a>}</span>
+    </div>
+  </div>
+</footer>

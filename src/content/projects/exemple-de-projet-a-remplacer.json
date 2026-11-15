@@ -1,0 +1,36 @@
+{
+  "title": "Exemple de projet — à remplacer",
+  "published": false,
+  "featured": false,
+  "order": 10,
+  "category": "seo",
+  "type": "academique",
+  "period": "",
+  "context_label": "",
+  "cover": "",
+  "gallery": [],
+  "tools": [
+    "answerthepublic"
+  ],
+  "links": [],
+  "fr": {
+    "summary": "Ce projet est un modèle non publié. Dupliquez-le ou créez un nouveau projet depuis l’admin, puis supprimez celui-ci.",
+    "cover_alt": "",
+    "presentation": "Décrivez le projet en deux ou trois phrases.",
+    "context": "",
+    "problem": "",
+    "objectives": "",
+    "analysis": "",
+    "methodology": "",
+    "strategy": "",
+    "work": "",
+    "results": "",
+    "conclusion": "",
+    "seo_title": "",
+    "seo_description": ""
+  },
+  "en": {
+    "title": "",
+    "summary": ""
+  }
+}

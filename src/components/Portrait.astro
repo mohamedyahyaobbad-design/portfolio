@@ -1,0 +1,27 @@
+---
+import { profile } from '../lib/content';
+import { localize, type Lang } from '../lib/i18n';
+import { img, srcset, initials } from '../lib/utils';
+interface Props { lang: Lang; eager?: boolean }
+const { lang, eager = false } = Astro.props;
+const P = localize<any>(profile, lang);
+---
+<div class="portrait-frame">
+  <div class="portrait">
+    {profile.photo ? (
+      <img
+        src={img(profile.photo, 720)}
+        srcset={srcset(profile.photo, [400, 560, 720, 960])}
+        sizes="(max-width: 900px) 360px, 440px"
+        alt={P.photo_alt || profile.name}
+        width="720" height="900"
+        loading={eager ? 'eager' : 'lazy'}
+        fetchpriority={eager ? 'high' : undefined}
+        decoding="async"
+      />
+    ) : (
+      <div class="portrait-placeholder" role="img" aria-label={P.photo_alt || profile.name}><span>{initials(profile.name)}</span></div>
+    )}
+  </div>
+  <slot />
+</div>

@@ -1,0 +1,10 @@
+{
+  "name": "Analyse de sites web",
+  "category": "seo",
+  "level": "",
+  "visible": true,
+  "order": 80,
+  "en": {
+    "name": "Website analysis"
+  }
+}

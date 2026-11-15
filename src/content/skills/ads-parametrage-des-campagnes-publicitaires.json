@@ -1,0 +1,10 @@
+{
+  "name": "Paramétrage des campagnes publicitaires",
+  "category": "ads",
+  "level": "",
+  "visible": true,
+  "order": 30,
+  "en": {
+    "name": "Ad campaign setup"
+  }
+}

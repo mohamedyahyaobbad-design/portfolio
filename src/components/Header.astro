@@ -1,0 +1,38 @@
+---
+import Icon from './Icon.astro';
+import { routes, ui, type Lang } from '../lib/i18n';
+import { profile } from '../lib/content';
+import { initials } from '../lib/utils';
+
+interface Props { lang: Lang; path: string; altPath: string }
+const { lang, path, altPath } = Astro.props;
+const L = ui[lang];
+const items = (['home', 'about', 'services', 'projects', 'skills'] as const).map((k) => ({ key: k, href: routes[k][lang], label: L.nav[k] }));
+const isCurrent = (href: string) => (href === routes.home[lang] ? path === href : path.startsWith(href));
+---
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href={routes.home[lang]} aria-label={`${profile.name} — ${L.nav.home}`}>
+      <span class="brand-mark" aria-hidden="true">{initials(profile.name)}</span>
+      <span>{profile.name}</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <span class="sr-only">{L.menu}</span>
+      <Icon name="menu" />
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Navigation" data-nav>
+      <ul class="nav-list">
+        {items.map((it) => (
+          <li><a href={it.href} aria-current={isCurrent(it.href) ? 'page' : undefined}>{it.label}</a></li>
+        ))}
+      </ul>
+      <div class="nav-tools">
+        <div class="lang-switch" aria-label="Langue / Language">
+          {lang === 'fr' ? <span aria-current="true">FR</span> : <a href={altPath} hreflang="fr" lang="fr">FR</a>}
+          {lang === 'en' ? <span aria-current="true">EN</span> : <a href={altPath} hreflang="en" lang="en">EN</a>}
+        </div>
+        <a class="btn btn--primary nav-cta" href={routes.contact[lang]}>{L.contactMe}</a>
+      </div>
+    </nav>
+  </div>
+</header>

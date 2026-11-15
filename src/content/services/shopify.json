@@ -1,0 +1,44 @@
+{
+  "title": "Création de boutiques Shopify",
+  "icon": "cart",
+  "image": "",
+  "visible": true,
+  "order": 40,
+  "fr": {
+    "description": "Une boutique en ligne claire, rassurante et prête à vendre.",
+    "problem": "Vous voulez vendre en ligne mais ne savez pas par où commencer, ou votre boutique actuelle convertit peu.",
+    "solution": "La création ou la refonte de votre boutique Shopify : thème personnalisé, catalogue organisé, paiements configurés et parcours d’achat optimisé.",
+    "prestations": [
+      "Configuration de la boutique",
+      "Personnalisation du thème",
+      "Gestion des produits et des collections",
+      "Configuration des paiements",
+      "Optimisation de l’expérience utilisateur"
+    ],
+    "deliverables": [
+      "Boutique Shopify opérationnelle",
+      "Catalogue structuré",
+      "Guide de prise en main"
+    ],
+    "cta_label": "Créer ma boutique"
+  },
+  "en": {
+    "title": "Shopify store creation",
+    "description": "A clear, trustworthy online store, ready to sell.",
+    "problem": "You want to sell online but don’t know where to start, or your current store converts poorly.",
+    "solution": "Building or redesigning your Shopify store: customised theme, organised catalogue, payments set up and an optimised buying journey.",
+    "prestations": [
+      "Store setup",
+      "Theme customisation",
+      "Product and collection management",
+      "Payment setup",
+      "User experience optimisation"
+    ],
+    "deliverables": [
+      "Working Shopify store",
+      "Structured catalogue",
+      "Handover guide"
+    ],
+    "cta_label": "Build my store"
+  }
+}

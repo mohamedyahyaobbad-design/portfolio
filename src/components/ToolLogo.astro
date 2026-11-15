@@ -1,0 +1,8 @@
+---
+import { img, initials } from '../lib/utils';
+interface Props { name: string; logo?: string | null }
+const { name, logo } = Astro.props;
+---
+<span class="tool-logo" aria-hidden="true">
+  {logo ? <img src={img(logo, 96)} alt="" width="30" height="30" loading="lazy" decoding="async" /> : initials(name)}
+</span>

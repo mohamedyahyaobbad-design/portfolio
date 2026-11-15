@@ -1,0 +1,15 @@
+{
+  "name": "Meta Business Suite",
+  "logo": "",
+  "category": "ads",
+  "level": "",
+  "url": "https://business.facebook.com",
+  "visible": true,
+  "order": 40,
+  "fr": {
+    "description": "Gestion des pages, publications et publicités Facebook et Instagram."
+  },
+  "en": {
+    "description": "Manage Facebook and Instagram pages, posts and ads."
+  }
+}

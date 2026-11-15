@@ -1,0 +1,10 @@
+{
+  "name": "Meta Ads",
+  "category": "ads",
+  "level": "",
+  "visible": true,
+  "order": 20,
+  "en": {
+    "name": "Meta Ads"
+  }
+}

@@ -1,0 +1,433 @@
+# ==========================================================
+# Administration du portfolio (Decap CMS)
+# Chaque enregistrement crée une mise à jour sur GitHub,
+# puis Netlify republie automatiquement le site (1 à 2 min).
+# ==========================================================
+backend:
+  name: github
+  repo: mohamedyahyaobbad-design/portfolio
+  branch: main
+  commit_messages:
+    create: "Ajout : {{collection}} « {{slug}} »"
+    update: "Mise à jour : {{collection}} « {{slug}} »"
+    delete: "Suppression : {{collection}} « {{slug}} »"
+    uploadMedia: "Ajout du média « {{path}} »"
+    deleteMedia: "Suppression du média « {{path}} »"
+
+locale: fr
+logo_url: /favicon.svg
+media_folder: public/uploads
+public_folder: /uploads
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  # ------------------------------------------------------------------
+  - name: projects
+    label: "Projets"
+    label_singular: "Projet"
+    description: "Vos études de cas. Un projet « Publié » apparaît automatiquement dans la galerie ; cochez « Mettre en avant » pour l’afficher sur l’accueil."
+    folder: src/content/projects
+    create: true
+    delete: true
+    extension: json
+    format: json
+    identifier_field: title
+    slug: "{{title}}"
+    summary: "{{title}} — {{category}}"
+    sortable_fields: [title, order]
+    view_filters:
+      - { label: "Publiés", field: published, pattern: true }
+      - { label: "Brouillons", field: published, pattern: false }
+      - { label: "Mis en avant", field: featured, pattern: true }
+    view_groups:
+      - { label: "Catégorie", field: category }
+    fields:
+      - { label: "Titre du projet (FR)", name: title, widget: string, hint: "Sert aussi à créer l’adresse de la page (URL). Évitez de le changer après publication." }
+      - { label: "Publié sur le site", name: published, widget: boolean, default: false, hint: "Désactivé = brouillon, invisible sur le site." }
+      - { label: "Mettre en avant sur l’accueil", name: featured, widget: boolean, default: false, required: false }
+      - { label: "Ordre d’affichage", name: order, widget: number, default: 10, value_type: int, required: false, hint: "Plus le nombre est petit, plus le projet apparaît en premier." }
+      - { label: "Catégorie", name: category, widget: select, options: &project_categories [{ label: "SEO", value: "seo" }, { label: "Google Ads", value: "google-ads" }, { label: "Meta Ads", value: "meta-ads" }, { label: "E-commerce", value: "ecommerce" }, { label: "Shopify", value: "shopify" }, { label: "WordPress", value: "wordpress" }, { label: "Design & Communication", value: "design" }] }
+      - label: "Type de projet"
+        name: type
+        widget: select
+        hint: "Soyez transparent : ce type est affiché sur la carte du projet."
+        options:
+          - { label: "Projet académique", value: "academique" }
+          - { label: "Projet personnel", value: "personnel" }
+          - { label: "Exercice pratique", value: "exercice" }
+          - { label: "Expérience professionnelle", value: "professionnel" }
+          - { label: "Mission freelance", value: "freelance" }
+      - { label: "Période", name: period, widget: string, required: false, hint: "Ex. : Oct. – Déc. 2026" }
+      - { label: "Cadre (FR)", name: context_label, widget: string, required: false, hint: "Ex. : Module SEO — Master 2 Marketing Digital" }
+      - { label: "Cadre (EN)", name: context_label_en, widget: string, required: false }
+      - { label: "Image de couverture", name: cover, widget: image, required: false, choose_url: false, hint: "Format paysage conseillé (ex. 1600 × 1000 px)." }
+      - label: "Captures d’écran (galerie)"
+        name: gallery
+        widget: list
+        required: false
+        collapsed: true
+        summary: "{{fields.caption}}"
+        hint: "Ajoutez autant d’images que nécessaire. Glissez-déposez pour changer l’ordre."
+        fields:
+          - { label: "Image", name: image, widget: image, choose_url: false }
+          - { label: "Légende (FR)", name: caption, widget: string, required: false }
+          - { label: "Légende (EN)", name: caption_en, widget: string, required: false }
+      - label: "Outils utilisés"
+        name: tools
+        widget: relation
+        collection: tools
+        search_fields: [name]
+        value_field: "{{slug}}"
+        display_fields: [name]
+        multiple: true
+        required: false
+        hint: "Choisissez parmi vos outils (rubrique Outils)."
+      - label: "Liens et vidéos"
+        name: links
+        widget: list
+        required: false
+        collapsed: true
+        summary: "{{fields.label}}"
+        hint: "Les vidéos YouTube sont intégrées automatiquement dans la page."
+        fields:
+          - { label: "Texte du lien (FR)", name: label, widget: string }
+          - { label: "Texte du lien (EN)", name: label_en, widget: string, required: false }
+          - { label: "Adresse (URL)", name: url, widget: string }
+          - { label: "Type", name: kind, widget: select, default: "link", options: [{ label: "Lien", value: "link" }, { label: "Vidéo", value: "video" }] }
+      - label: "Contenu en français"
+        name: fr
+        widget: object
+        collapsed: false
+        fields:
+          - { label: "Description courte (carte du projet)", name: summary, widget: text, hint: "1 à 2 phrases." }
+          - { label: "Texte alternatif de la couverture (SEO / accessibilité)", name: cover_alt, widget: string, required: false }
+          - { label: "Présentation du projet", name: presentation, widget: markdown, required: false, buttons: &md_buttons [bold, italic, link, heading-three, bulleted-list, numbered-list, quote], editor_components: [] }
+          - { label: "Contexte", name: context, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Problématique", name: problem, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Objectifs", name: objectives, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Analyse réalisée", name: analysis, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Méthodologie", name: methodology, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Stratégie adoptée", name: strategy, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Travail effectué", name: work, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Résultats ou livrables", name: results, widget: markdown, required: false, buttons: *md_buttons, editor_components: [], hint: "N’indiquez que des résultats réels et vérifiables." }
+          - { label: "Conclusion", name: conclusion, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "SEO — Titre de la page (facultatif)", name: seo_title, widget: string, required: false, hint: "50 à 60 caractères. Par défaut : le titre du projet." }
+          - { label: "SEO — Meta description (facultatif)", name: seo_description, widget: text, required: false, hint: "140 à 160 caractères. Par défaut : la description courte." }
+      - label: "Contenu en anglais (facultatif — à défaut, le texte français est utilisé)"
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - { label: "Title", name: title, widget: string, required: false }
+          - { label: "Short description", name: summary, widget: text, required: false }
+          - { label: "Cover alt text", name: cover_alt, widget: string, required: false }
+          - { label: "Project overview", name: presentation, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Context", name: context, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Challenge", name: problem, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Objectives", name: objectives, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Analysis", name: analysis, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Methodology", name: methodology, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Strategy", name: strategy, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Work carried out", name: work, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Results & deliverables", name: results, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "Conclusion", name: conclusion, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+          - { label: "SEO title", name: seo_title, widget: string, required: false }
+          - { label: "SEO meta description", name: seo_description, widget: text, required: false }
+
+  # ------------------------------------------------------------------
+  - name: tools
+    label: "Outils"
+    label_singular: "Outil"
+    description: "Les outils ajoutés ici apparaissent automatiquement sur la page Compétences & outils, et peuvent être liés à vos projets."
+    folder: src/content/tools
+    create: true
+    delete: true
+    extension: json
+    format: json
+    identifier_field: name
+    slug: "{{name}}"
+    summary: "{{name}} — {{category}}"
+    sortable_fields: [name, order]
+    fields:
+      - { label: "Nom de l’outil", name: name, widget: string }
+      - { label: "Logo", name: logo, widget: image, required: false, choose_url: false, hint: "Format carré, idéalement SVG ou PNG transparent. Sans logo, les initiales sont affichées." }
+      - { label: "Catégorie", name: category, widget: select, options: &skill_categories [{ label: "SEO", value: "seo" }, { label: "Publicité en ligne (Ads)", value: "ads" }, { label: "E-commerce", value: "ecommerce" }, { label: "Web & CMS", value: "cms" }, { label: "Analyse & Reporting", value: "analytics" }, { label: "Recherche & Veille", value: "research" }, { label: "Design & Communication", value: "design" }, { label: "Autres", value: "autre" }] }
+      - { label: "Niveau de maîtrise (facultatif)", name: level, widget: select, required: false, options: &levels [{ label: "Notions", value: "notions" }, { label: "Intermédiaire", value: "intermediaire" }, { label: "Avancé", value: "avance" }, { label: "Expert", value: "expert" }], hint: "Laissez vide pour ne pas afficher de niveau." }
+      - { label: "Site officiel (facultatif)", name: url, widget: string, required: false }
+      - { label: "Afficher sur le site", name: visible, widget: boolean, default: true }
+      - { label: "Ordre d’affichage", name: order, widget: number, default: 10, value_type: int, required: false }
+      - label: "Description (FR)"
+        name: fr
+        widget: object
+        fields:
+          - { label: "Description", name: description, widget: text, required: false }
+      - label: "Description (EN)"
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - { label: "Description", name: description, widget: text, required: false }
+
+  # ------------------------------------------------------------------
+  - name: skills
+    label: "Compétences"
+    label_singular: "Compétence"
+    description: "Vos compétences, classées par catégorie. Décochez « Afficher » pour masquer une compétence sans la supprimer."
+    folder: src/content/skills
+    create: true
+    delete: true
+    extension: json
+    format: json
+    identifier_field: name
+    slug: "{{category}}-{{name}}"
+    summary: "{{name}} — {{category}}"
+    sortable_fields: [name, category, order]
+    view_groups:
+      - { label: "Catégorie", field: category }
+    fields:
+      - { label: "Compétence (FR)", name: name, widget: string }
+      - { label: "Catégorie", name: category, widget: select, options: *skill_categories }
+      - { label: "Niveau de maîtrise (facultatif)", name: level, widget: select, required: false, options: *levels, hint: "Laissez vide pour ne pas afficher de niveau." }
+      - { label: "Afficher sur le site", name: visible, widget: boolean, default: true }
+      - { label: "Ordre d’affichage", name: order, widget: number, default: 10, value_type: int, required: false }
+      - label: "Version anglaise"
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - { label: "Skill (EN)", name: name, widget: string, required: false }
+
+  # ------------------------------------------------------------------
+  - name: services
+    label: "Services"
+    label_singular: "Service"
+    description: "Vos offres. Elles apparaissent sur l’accueil et sur la page Services."
+    folder: src/content/services
+    create: true
+    delete: true
+    extension: json
+    format: json
+    identifier_field: title
+    slug: "{{title}}"
+    summary: "{{title}}"
+    sortable_fields: [title, order]
+    fields:
+      - { label: "Titre du service (FR)", name: title, widget: string }
+      - { label: "Icône", name: icon, widget: select, options: &icons [{ label: "Loupe (SEO)", value: "search" }, { label: "Mégaphone (Ads)", value: "ads" }, { label: "Réseaux sociaux (Meta)", value: "meta" }, { label: "Panier (E-commerce)", value: "cart" }, { label: "Site web", value: "web" }, { label: "Boussole (Stratégie)", value: "compass" }, { label: "Graphique (Analyse)", value: "chart" }, { label: "Crayon (Design/Contenu)", value: "pen" }, { label: "Cible", value: "target" }, { label: "Couches", value: "layers" }], default: "layers" }
+      - { label: "Image ou icône personnalisée (facultatif)", name: image, widget: image, required: false, choose_url: false, hint: "Remplace l’icône ci-dessus si renseignée." }
+      - { label: "Afficher sur le site", name: visible, widget: boolean, default: true }
+      - { label: "Ordre d’affichage", name: order, widget: number, default: 10, value_type: int, required: false }
+      - label: "Contenu en français"
+        name: fr
+        widget: object
+        fields:
+          - { label: "Description courte", name: description, widget: text }
+          - { label: "Le problème du client", name: problem, widget: text, required: false }
+          - { label: "La solution proposée", name: solution, widget: text, required: false }
+          - { label: "Prestations", name: prestations, widget: list, required: false, field: { label: "Prestation", name: item, widget: string } }
+          - { label: "Livrables", name: deliverables, widget: list, required: false, field: { label: "Livrable", name: item, widget: string } }
+          - { label: "Texte du bouton", name: cta_label, widget: string, required: false, hint: "Ex. : Demander un audit SEO" }
+      - label: "Contenu en anglais (facultatif)"
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - { label: "Title", name: title, widget: string, required: false }
+          - { label: "Short description", name: description, widget: text, required: false }
+          - { label: "Client problem", name: problem, widget: text, required: false }
+          - { label: "Proposed solution", name: solution, widget: text, required: false }
+          - { label: "What’s included", name: prestations, widget: list, required: false, field: { label: "Item", name: item, widget: string } }
+          - { label: "Deliverables", name: deliverables, widget: list, required: false, field: { label: "Deliverable", name: item, widget: string } }
+          - { label: "Button text", name: cta_label, widget: string, required: false }
+
+  # ------------------------------------------------------------------
+  - name: testimonials
+    label: "Témoignages"
+    label_singular: "Témoignage"
+    description: "Uniquement de vrais témoignages. La section n’apparaît sur l’accueil que lorsqu’au moins un témoignage est visible."
+    folder: src/content/testimonials
+    create: true
+    delete: true
+    extension: json
+    format: json
+    identifier_field: name
+    slug: "{{name}}"
+    summary: "{{name}} — {{company}}"
+    fields:
+      - { label: "Nom de la personne", name: name, widget: string }
+      - { label: "Fonction", name: role, widget: string, required: false }
+      - { label: "Entreprise", name: company, widget: string, required: false }
+      - { label: "Photo (facultatif)", name: photo, widget: image, required: false, choose_url: false }
+      - { label: "Lien (LinkedIn…, facultatif)", name: url, widget: string, required: false }
+      - { label: "Afficher sur le site", name: visible, widget: boolean, default: true }
+      - { label: "Ordre d’affichage", name: order, widget: number, default: 10, value_type: int, required: false }
+      - label: "Témoignage (FR)"
+        name: fr
+        widget: object
+        fields:
+          - { label: "Citation", name: quote, widget: text }
+      - label: "Testimonial (EN)"
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - { label: "Quote", name: quote, widget: text, required: false }
+          - { label: "Role", name: role, widget: string, required: false }
+
+  # ------------------------------------------------------------------
+  - name: profile
+    label: "Profil"
+    description: "Votre nom, votre photo, votre titre et votre CV."
+    editor: { preview: false }
+    files:
+      - name: profile
+        label: "Informations du profil"
+        file: src/data/profile.json
+        fields:
+          - { label: "Nom professionnel", name: name, widget: string }
+          - { label: "Photo professionnelle", name: photo, widget: image, required: false, choose_url: false, hint: "Format portrait (4:5) conseillé, au moins 900 px de haut." }
+          - { label: "CV (FR) — PDF", name: cv_fr, widget: file, required: false, choose_url: false }
+          - { label: "CV (EN) — PDF", name: cv_en, widget: file, required: false, choose_url: false, hint: "Facultatif : à défaut, le CV français est proposé." }
+          - label: "Français"
+            name: fr
+            widget: object
+            fields:
+              - { label: "Titre professionnel", name: job_title, widget: string }
+              - { label: "Accroche courte", name: tagline, widget: string, required: false, hint: "Ex. : SEO · Publicité en ligne · E-commerce" }
+              - { label: "Texte alternatif de la photo", name: photo_alt, widget: string, required: false }
+          - label: "English"
+            name: en
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Job title", name: job_title, widget: string, required: false }
+              - { label: "Tagline", name: tagline, widget: string, required: false }
+              - { label: "Photo alt text", name: photo_alt, widget: string, required: false }
+
+  # ------------------------------------------------------------------
+  - name: contact
+    label: "Coordonnées"
+    description: "Email, téléphone, LinkedIn et réseaux sociaux."
+    editor: { preview: false }
+    files:
+      - name: contact
+        label: "Coordonnées et réseaux"
+        file: src/data/contact.json
+        fields:
+          - { label: "Email", name: email, widget: string, required: false }
+          - { label: "Téléphone", name: phone, widget: string, required: false }
+          - { label: "Profil LinkedIn (URL complète)", name: linkedin, widget: string, required: false }
+          - label: "Autres réseaux"
+            name: socials
+            widget: list
+            required: false
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Nom (ex. : Instagram, GitHub, Behance)", name: label, widget: string }
+              - { label: "Adresse (URL)", name: url, widget: string }
+          - label: "Français"
+            name: fr
+            widget: object
+            fields:
+              - { label: "Localisation", name: location, widget: string, required: false }
+              - { label: "Disponibilité", name: availability, widget: text, required: false }
+              - { label: "Introduction de la page Contact", name: intro, widget: text, required: false }
+          - label: "English"
+            name: en
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Location", name: location, widget: string, required: false }
+              - { label: "Availability", name: availability, widget: text, required: false }
+              - { label: "Contact page intro", name: intro, widget: text, required: false }
+
+  # ------------------------------------------------------------------
+  - name: pages
+    label: "Textes des pages"
+    description: "Les textes de l’accueil, de la page À propos et le référencement (SEO)."
+    editor: { preview: false }
+    files:
+      - name: home
+        label: "Accueil"
+        file: src/data/home.json
+        fields:
+          - label: "Français"
+            name: fr
+            widget: object
+            fields:
+              - { label: "Titre principal (H1)", name: hero_title, widget: text }
+              - { label: "Présentation courte", name: hero_intro, widget: text, required: false }
+              - { label: "Domaines principaux", name: domains, widget: list, required: false, field: { label: "Domaine", name: item, widget: string } }
+              - { label: "Appel à l’action final — titre", name: cta_title, widget: string, required: false }
+              - { label: "Appel à l’action final — texte", name: cta_text, widget: text, required: false }
+          - label: "English"
+            name: en
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Main headline (H1)", name: hero_title, widget: text, required: false }
+              - { label: "Short intro", name: hero_intro, widget: text, required: false }
+              - { label: "Main areas", name: domains, widget: list, required: false, field: { label: "Area", name: item, widget: string } }
+              - { label: "Final call to action — title", name: cta_title, widget: string, required: false }
+              - { label: "Final call to action — text", name: cta_text, widget: text, required: false }
+      - name: about
+        label: "À propos"
+        file: src/data/about.json
+        fields:
+          - label: "Français"
+            name: fr
+            widget: object
+            fields:
+              - { label: "Titre de la page", name: title, widget: string }
+              - { label: "Introduction", name: intro, widget: text, required: false }
+              - { label: "Parcours académique", name: education, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+              - { label: "Expérience et projets", name: experience, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+              - { label: "Ma vision du marketing digital", name: vision, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+              - { label: "Objectifs professionnels", name: goals, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+              - { label: "SEO — Meta description", name: seo_description, widget: text, required: false }
+          - label: "English"
+            name: en
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Page title", name: title, widget: string, required: false }
+              - { label: "Introduction", name: intro, widget: text, required: false }
+              - { label: "Education", name: education, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+              - { label: "Experience & projects", name: experience, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+              - { label: "Vision", name: vision, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+              - { label: "Career goals", name: goals, widget: markdown, required: false, buttons: *md_buttons, editor_components: [] }
+              - { label: "SEO meta description", name: seo_description, widget: text, required: false }
+      - name: seo
+        label: "Référencement (SEO)"
+        file: src/data/seo.json
+        fields:
+          - { label: "Image de partage (réseaux sociaux)", name: og_image, widget: image, required: false, choose_url: false, hint: "1200 × 630 px. Par défaut : votre photo." }
+          - label: "Français"
+            name: fr
+            widget: object
+            fields:
+              - { label: "Titre de la page d’accueil (balise Title)", name: home_title, widget: string }
+              - { label: "Meta description par défaut / accueil", name: description, widget: text }
+              - { label: "Meta description — Projets", name: projects_description, widget: text, required: false }
+              - { label: "Meta description — Services", name: services_description, widget: text, required: false }
+              - { label: "Meta description — Compétences", name: skills_description, widget: text, required: false }
+              - { label: "Meta description — Contact", name: contact_description, widget: text, required: false }
+          - label: "English"
+            name: en
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Home page title", name: home_title, widget: string, required: false }
+              - { label: "Default / home meta description", name: description, widget: text, required: false }
+              - { label: "Meta description — Projects", name: projects_description, widget: text, required: false }
+              - { label: "Meta description — Services", name: services_description, widget: text, required: false }
+              - { label: "Meta description — Skills", name: skills_description, widget: text, required: false }
+              - { label: "Meta description — Contact", name: contact_description, widget: text, required: false }

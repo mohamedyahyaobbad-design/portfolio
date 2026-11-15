@@ -1,0 +1,10 @@
+{
+  "name": "Création de campagnes",
+  "category": "ads",
+  "level": "",
+  "visible": true,
+  "order": 40,
+  "en": {
+    "name": "Campaign creation"
+  }
+}

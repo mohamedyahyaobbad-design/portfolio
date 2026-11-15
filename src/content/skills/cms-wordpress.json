@@ -1,0 +1,10 @@
+{
+  "name": "WordPress",
+  "category": "cms",
+  "level": "",
+  "visible": true,
+  "order": 10,
+  "en": {
+    "name": "WordPress"
+  }
+}

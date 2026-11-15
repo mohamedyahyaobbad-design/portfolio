@@ -1,0 +1,15 @@
+{
+  "name": "Shopify",
+  "logo": "",
+  "category": "ecommerce",
+  "level": "",
+  "url": "https://www.shopify.com",
+  "visible": true,
+  "order": 20,
+  "fr": {
+    "description": "Plateforme de création et de gestion de boutiques en ligne."
+  },
+  "en": {
+    "description": "Platform to build and run online stores."
+  }
+}

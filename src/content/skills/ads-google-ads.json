@@ -1,0 +1,10 @@
+{
+  "name": "Google Ads",
+  "category": "ads",
+  "level": "",
+  "visible": true,
+  "order": 10,
+  "en": {
+    "name": "Google Ads"
+  }
+}

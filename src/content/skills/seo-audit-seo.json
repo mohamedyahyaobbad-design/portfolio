@@ -1,0 +1,10 @@
+{
+  "name": "Audit SEO",
+  "category": "seo",
+  "level": "",
+  "visible": true,
+  "order": 10,
+  "en": {
+    "name": "SEO audit"
+  }
+}

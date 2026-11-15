@@ -1,0 +1,10 @@
+{
+  "name": "Personnalisation de sites CMS",
+  "category": "cms",
+  "level": "",
+  "visible": true,
+  "order": 40,
+  "en": {
+    "name": "CMS website customisation"
+  }
+}

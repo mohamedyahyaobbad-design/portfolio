@@ -1,0 +1,10 @@
+{
+  "name": "Optimisation des balises Title et Meta Description",
+  "category": "seo",
+  "level": "",
+  "visible": true,
+  "order": 40,
+  "en": {
+    "name": "Title & meta description optimisation"
+  }
+}

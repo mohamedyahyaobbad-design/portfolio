@@ -1,0 +1,16 @@
+{
+  "fr": {
+    "hero_title": "J'aide les entreprises à développer leur visibilité et leur performance digitale.",
+    "hero_intro": "Étudiant en Master 2 Marketing Digital, je conçois et pilote des actions concrètes en SEO, en publicité en ligne et en e-commerce : de l’audit à la mise en œuvre, avec une méthode claire et des livrables exploitables.",
+    "domains": ["SEO", "Paid Advertising", "E-commerce"],
+    "cta_title": "Un stage, une mission ou un projet à lancer ?",
+    "cta_text": "Parlons de vos objectifs : je vous propose une approche claire et des actions concrètes."
+  },
+  "en": {
+    "hero_title": "I help businesses grow their online visibility and digital performance.",
+    "hero_intro": "A Master’s student in Digital Marketing, I plan and run hands-on SEO, paid advertising and e-commerce work — from audit to execution, with a clear method and usable deliverables.",
+    "domains": ["SEO", "Paid Advertising", "E-commerce"],
+    "cta_title": "An internship, a project or an idea to launch?",
+    "cta_text": "Let’s talk about your goals: I’ll suggest a clear approach and concrete actions."
+  }
+}

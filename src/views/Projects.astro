@@ -1,0 +1,77 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { getProjects, seo } from '../lib/content';
+import { localize, projectCategories, routes, ui, type Lang } from '../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const L = ui[lang];
+const S = localize<any>(seo, lang);
+const projects = await getProjects();
+const used = new Set(projects.map((p) => p.data.category));
+const cats = projectCategories.filter((c) => used.has(c.id));
+const title = lang === 'fr' ? 'Projets & études de cas' : 'Projects & case studies';
+---
+<Base lang={lang} title={title} description={S.projects_description} path={routes.projects[lang]} altPath={routes.projects[lang === 'fr' ? 'en' : 'fr']}>
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">{L.nav.projects}</p>
+      <h1>{title}</h1>
+      <p class="lead">{lang === 'fr'
+        ? 'Projets académiques, personnels et exercices pratiques : chaque étude de cas présente le contexte, la méthode, les outils et les livrables. Le type de chaque projet est indiqué sur sa carte.'
+        : 'Academic, personal and practice projects: each case study covers the context, method, tools and deliverables. Each project’s type is shown on its card.'}</p>
+    </div>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container">
+      {projects.length ? (
+        <>
+          {cats.length > 1 && (
+            <div class="filters" role="group" aria-label={L.filterLabel} data-filters>
+              <button class="filter-btn" type="button" aria-pressed="true" data-filter="all">{L.filterAll} <span class="muted">({projects.length})</span></button>
+              {cats.map((c) => (
+                <button class="filter-btn" type="button" aria-pressed="false" data-filter={c.id}>{c[lang]}</button>
+              ))}
+            </div>
+          )}
+          <div class="grid grid-3" data-grid>
+            {projects.map((p) => <ProjectCard project={p} lang={lang} headingLevel="h2" />)}
+          </div>
+          <p class="sr-only" aria-live="polite" data-count></p>
+        </>
+      ) : (
+        <p class="empty">{L.noProjects}</p>
+      )}
+    </div>
+  </section>
+
+  <CtaBand lang={lang} />
+</Base>
+
+<script>
+  const wrap = document.querySelector('[data-filters]');
+  const cards = document.querySelectorAll<HTMLElement>('[data-grid] .project-card');
+  const live = document.querySelector('[data-count]');
+  const apply = (f: string) => {
+    let n = 0;
+    cards.forEach((c) => {
+      const show = f === 'all' || c.dataset.category === f;
+      c.hidden = !show;
+      if (show) { n++; c.classList.add('is-visible'); }
+    });
+    wrap?.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === f)));
+    if (live) live.textContent = `${n}`;
+  };
+  wrap?.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest('button');
+    if (!btn) return;
+    const f = btn.dataset.filter || 'all';
+    apply(f);
+    history.replaceState(null, '', f === 'all' ? location.pathname : `#${f}`);
+  });
+  const initial = location.hash.slice(1);
+  if (initial && wrap?.querySelector(`[data-filter="${CSS.escape(initial)}"]`)) apply(initial);
+</script>

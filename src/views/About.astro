@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Portrait from '../components/Portrait.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { about, contact, getSkills, nameOf, profile } from '../lib/content';
+import { localize, routes, ui, type Lang } from '../lib/i18n';
+import { hasText, md } from '../lib/utils';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const L = ui[lang];
+const A = localize<any>(about, lang);
+const P = localize<any>(profile, lang);
+const C = localize<any>(contact, lang);
+const cv = (lang === 'en' && profile.cv_en) || profile.cv_fr || profile.cv_en;
+const skills = (await getSkills()).slice(0, 14);
+const blocks = [
+  { key: 'education', icon: 'book', title: lang === 'fr' ? 'Parcours académique' : 'Education' },
+  { key: 'experience', icon: 'briefcase', title: lang === 'fr' ? 'Expérience & projets' : 'Experience & projects' },
+  { key: 'vision', icon: 'eye', title: lang === 'fr' ? 'Ma vision du marketing digital' : 'My view of digital marketing' },
+  { key: 'goals', icon: 'target', title: lang === 'fr' ? 'Objectifs professionnels' : 'Career goals' },
+].filter((b) => hasText(A[b.key]));
+---
+<Base lang={lang} title={A.title || L.nav.about} description={A.seo_description} path={routes.about[lang]} altPath={routes.about[lang === 'fr' ? 'en' : 'fr']}>
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">{L.nav.about}</p>
+      <h1>{A.title || L.nav.about}</h1>
+      <p class="lead">{P.job_title}{P.tagline ? ` — ${P.tagline}` : ''}</p>
+    </div>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container about-grid">
+      <div class="stack">
+        <Portrait lang={lang} eager />
+        {C.availability && <div class="availability mt-2"><span class="status-dot" aria-hidden="true"></span><span>{C.availability}</span></div>}
+        <div class="btn-row">
+          {cv && <a class="btn btn--primary" href={cv} download><Icon name="download" /> {L.downloadCv}</a>}
+          <a class="btn btn--ghost" href={routes.contact[lang]}>{L.contactMe}</a>
+        </div>
+      </div>
+      <div class="about-sections">
+        {A.intro && <p class="lead reveal" style="color:var(--text-2)">{A.intro}</p>}
+        {blocks.map((b) => (
+          <section class="card about-block reveal">
+            <h2><span class="icon-box" aria-hidden="true"><Icon name={b.icon} /></span>{b.title}</h2>
+            <div class="prose" set:html={md(A[b.key])} />
+          </section>
+        ))}
+        {skills.length > 0 && (
+          <section class="card about-block reveal">
+            <h2><span class="icon-box" aria-hidden="true"><Icon name="layers" /></span>{L.skillsTitle}</h2>
+            <ul class="chips">{skills.map((s) => <li class="chip">{nameOf(s.data, lang)}</li>)}</ul>
+            <p style="margin:1rem 0 0"><a class="link-arrow" href={routes.skills[lang]}>{L.allSkills} <Icon name="arrow" /></a></p>
+          </section>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} />
+</Base>

@@ -1,0 +1,10 @@
+{
+  "name": "SEO on-page",
+  "category": "seo",
+  "level": "",
+  "visible": true,
+  "order": 30,
+  "en": {
+    "name": "On-page SEO"
+  }
+}

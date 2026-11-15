@@ -1,0 +1,10 @@
+{
+  "name": "Optimisation de l’expérience utilisateur",
+  "category": "ecommerce",
+  "level": "",
+  "visible": true,
+  "order": 50,
+  "en": {
+    "name": "User experience optimisation"
+  }
+}

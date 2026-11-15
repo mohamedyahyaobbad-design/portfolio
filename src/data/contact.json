@@ -1,0 +1,16 @@
+{
+  "email": "",
+  "phone": "",
+  "linkedin": "",
+  "socials": [],
+  "fr": {
+    "location": "Casablanca, Maroc",
+    "availability": "Disponible pour un stage PFE de 6 mois ou plus à Casablanca, et pour des missions freelance.",
+    "intro": "Un projet, une offre de stage ou une question ? Choisissez le type de demande et écrivez-moi : je vous réponds rapidement."
+  },
+  "en": {
+    "location": "Casablanca, Morocco",
+    "availability": "Available for a 6-month (or longer) final-year internship in Casablanca, and for freelance projects.",
+    "intro": "A project, an internship offer or a question? Pick the type of request and write to me — I’ll get back to you quickly."
+  }
+}

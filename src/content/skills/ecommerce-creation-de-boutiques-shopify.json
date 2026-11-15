@@ -1,0 +1,10 @@
+{
+  "name": "Création de boutiques Shopify",
+  "category": "ecommerce",
+  "level": "",
+  "visible": true,
+  "order": 10,
+  "en": {
+    "name": "Shopify store creation"
+  }
+}

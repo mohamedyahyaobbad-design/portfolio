@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import ToolLogo from '../components/ToolLogo.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { getSkills, getTools, nameOf, seo } from '../lib/content';
+import { label, levels, localize, routes, skillCategories, ui, type Lang } from '../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const L = ui[lang];
+const S = localize<any>(seo, lang);
+const skills = await getSkills();
+const tools = await getTools();
+const groupIcon: Record<string, string> = { seo: 'search', ads: 'ads', ecommerce: 'cart', cms: 'web', analytics: 'chart', research: 'eye', design: 'pen', autre: 'layers' };
+const groups = skillCategories
+  .map((c) => ({ ...c, items: skills.filter((s) => (s.data.category ?? 'autre') === c.id) }))
+  .filter((g) => g.items.length);
+const toolGroups = skillCategories
+  .map((c) => ({ ...c, items: tools.filter((t) => (t.data.category ?? 'autre') === c.id) }))
+  .filter((g) => g.items.length);
+const lvl = (v?: string | null) => (v && levels[v] ? levels[v][lang] : '');
+const title = lang === 'fr' ? 'Compétences & outils' : 'Skills & tools';
+---
+<Base lang={lang} title={title} description={S.skills_description} path={routes.skills[lang]} altPath={routes.skills[lang === 'fr' ? 'en' : 'fr']}>
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">{L.nav.skills}</p>
+      <h1>{title}</h1>
+      <p class="lead">{lang === 'fr'
+        ? 'Les compétences que je mets en pratique dans mes projets, et les outils que j’utilise au quotidien.'
+        : 'The skills I put into practice in my projects, and the tools I use day to day.'}</p>
+    </div>
+  </header>
+
+  {groups.length > 0 && (
+    <section class="section section--tight" aria-labelledby="skills-h">
+      <div class="container">
+        <h2 id="skills-h" class="reveal">{L.skillsTitle}</h2>
+        <div class="grid grid-2 mt-2">
+          {groups.map((g) => (
+            <div class="card skill-group reveal">
+              <h3><span class="icon-box" aria-hidden="true"><Icon name={groupIcon[g.id] ?? 'layers'} /></span>{g[lang]}</h3>
+              <ul class="chips">
+                {g.items.map((s) => (
+                  <li class="chip">{nameOf(s.data, lang)}{lvl(s.data.level) && <small>· {lvl(s.data.level)}</small>}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {toolGroups.length > 0 && (
+    <section class="section section--alt" aria-labelledby="tools-h">
+      <div class="container">
+        <h2 id="tools-h" class="reveal">{L.tools_title}</h2>
+        {toolGroups.map((g) => (
+          <div class="cat-block mt-2">
+            <h3 class="muted reveal" style="font-size:.85rem;text-transform:uppercase;letter-spacing:.1em">{g[lang]}</h3>
+            <div class="tool-grid">
+              {g.items.map((t) => {
+                const T = localize<any>(t.data, lang);
+                return (
+                  <div class="card tool-card reveal">
+                    <ToolLogo name={t.data.name} logo={t.data.logo} />
+                    <div>
+                      <h4>{t.data.name}{lvl(t.data.level) && <small class="muted" style="font-weight:500"> · {lvl(t.data.level)}</small>}</h4>
+                      {T.description && <p>{T.description}</p>}
+                      {t.data.url && <a href={t.data.url} target="_blank" rel="noopener">{L.officialSite} ↗</a>}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <CtaBand lang={lang} />
+</Base>

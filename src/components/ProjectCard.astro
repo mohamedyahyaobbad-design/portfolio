@@ -1,0 +1,34 @@
+---
+import Icon from './Icon.astro';
+import { label, localize, projectCategories, projectTypes, projectUrl, ui, type Lang } from '../lib/i18n';
+import { titleOf } from '../lib/content';
+import { img, srcset } from '../lib/utils';
+
+interface Props { project: any; lang: Lang; headingLevel?: 'h2' | 'h3' }
+const { project, lang, headingLevel = 'h3' } = Astro.props;
+const d = project.data;
+const T = localize<any>(d, lang);
+const title = titleOf(d, lang);
+const href = projectUrl(lang, project.id);
+const cat = label(projectCategories, d.category, lang);
+const type = d.type ? projectTypes[d.type]?.[lang] : '';
+const H = headingLevel;
+---
+<article class="card project-card reveal" data-category={d.category ?? ''}>
+  <div class="project-cover">
+    {d.cover ? (
+      <img src={img(d.cover, 800)} srcset={srcset(d.cover, [400, 640, 800, 1200])} sizes="(max-width: 700px) 100vw, 380px" alt={T.cover_alt || title} loading="lazy" decoding="async" width="800" height="500" />
+    ) : (
+      <div class="cover-placeholder" aria-hidden="true">{cat || title}</div>
+    )}
+  </div>
+  <div class="project-body">
+    <div class="project-meta">
+      {cat && <span class="badge">{cat}</span>}
+      {type && <span class="badge badge--neutral">{type}</span>}
+    </div>
+    <H><a href={href}>{title}</a></H>
+    {T.summary && <p>{T.summary}</p>}
+    <span class="link-arrow" aria-hidden="true">{ui[lang].seeProject} <Icon name="arrow" /></span>
+  </div>
+</article>

@@ -1,0 +1,10 @@
+{
+  "name": "Suivi des performances",
+  "category": "ads",
+  "level": "",
+  "visible": true,
+  "order": 60,
+  "en": {
+    "name": "Performance tracking"
+  }
+}

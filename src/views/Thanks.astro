@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { routes, ui, type Lang } from '../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const L = ui[lang];
+---
+<Base lang={lang} title={lang === 'fr' ? 'Message envoyé' : 'Message sent'} path={routes.thanks[lang]} altPath={routes.thanks[lang === 'fr' ? 'en' : 'fr']} noindex>
+  <section class="section">
+    <div class="container narrow center" style="margin-inline:auto">
+      <p class="eyebrow">{lang === 'fr' ? 'Merci !' : 'Thank you!'}</p>
+      <h1>{lang === 'fr' ? 'Votre message a bien été envoyé.' : 'Your message has been sent.'}</h1>
+      <p class="lead" style="margin-inline:auto">{lang === 'fr' ? 'Je vous réponds dans les meilleurs délais.' : 'I’ll get back to you as soon as possible.'}</p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn btn--primary" href={routes.projects[lang]}>{L.seeProjects} <Icon name="arrow" /></a>
+        <a class="btn btn--ghost" href={routes.home[lang]}>{L.nav.home}</a>
+      </div>
+    </div>
+  </section>
+</Base>

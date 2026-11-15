@@ -1,0 +1,44 @@
+{
+  "title": "Campagnes Google Ads",
+  "icon": "ads",
+  "image": "",
+  "visible": true,
+  "order": 20,
+  "fr": {
+    "description": "Apparaître en haut des résultats de recherche au moment où vos clients vous cherchent.",
+    "problem": "Vous voulez des prospects rapidement, mais vos campagnes coûtent cher ou ne sont pas encore lancées.",
+    "solution": "Une structure de campagne claire, des mots-clés et des annonces ciblés, un suivi des conversions et des optimisations régulières.",
+    "prestations": [
+      "Paramétrage du compte et des conversions",
+      "Structure des campagnes et groupes d’annonces",
+      "Recherche de mots-clés et mots-clés négatifs",
+      "Rédaction des annonces",
+      "Suivi et optimisation"
+    ],
+    "deliverables": [
+      "Campagnes prêtes à diffuser",
+      "Plan de mots-clés",
+      "Rapport de performance"
+    ],
+    "cta_label": "Lancer une campagne Google Ads"
+  },
+  "en": {
+    "title": "Google Ads campaigns",
+    "description": "Show up at the top of search results right when customers are looking for you.",
+    "problem": "You need leads quickly, but your campaigns are costly or not launched yet.",
+    "solution": "A clear campaign structure, targeted keywords and ads, conversion tracking and regular optimisation.",
+    "prestations": [
+      "Account and conversion setup",
+      "Campaign and ad group structure",
+      "Keyword and negative keyword research",
+      "Ad copywriting",
+      "Monitoring and optimisation"
+    ],
+    "deliverables": [
+      "Ready-to-run campaigns",
+      "Keyword plan",
+      "Performance report"
+    ],
+    "cta_label": "Launch a Google Ads campaign"
+  }
+}

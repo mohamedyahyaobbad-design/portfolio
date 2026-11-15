@@ -1,0 +1,46 @@
+{
+  "title": "Audit et optimisation SEO",
+  "icon": "search",
+  "image": "",
+  "visible": true,
+  "order": 10,
+  "fr": {
+    "description": "Comprendre pourquoi votre site n’apparaît pas dans Google et corriger ce qui freine sa visibilité.",
+    "problem": "Votre site reçoit peu de visites depuis Google, ou vous ne savez pas sur quels mots-clés vous positionner.",
+    "solution": "Un audit structuré (technique, contenu, concurrence) et un plan d’action priorisé, puis l’optimisation des pages clés.",
+    "prestations": [
+      "Audit technique et on-page",
+      "Recherche de mots-clés",
+      "Analyse concurrentielle",
+      "Optimisation des balises Title, Meta Description et Hn",
+      "Recommandations de contenu"
+    ],
+    "deliverables": [
+      "Rapport d’audit",
+      "Liste de mots-clés priorisée",
+      "Plan d’action SEO",
+      "Pages optimisées"
+    ],
+    "cta_label": "Demander un audit SEO"
+  },
+  "en": {
+    "title": "SEO audit & optimisation",
+    "description": "Find out why your website doesn’t show up on Google and fix what holds it back.",
+    "problem": "Your website gets little traffic from Google, or you don’t know which keywords to target.",
+    "solution": "A structured audit (technical, content, competitors) and a prioritised action plan, then optimisation of key pages.",
+    "prestations": [
+      "Technical and on-page audit",
+      "Keyword research",
+      "Competitive analysis",
+      "Title, meta description and heading optimisation",
+      "Content recommendations"
+    ],
+    "deliverables": [
+      "Audit report",
+      "Prioritised keyword list",
+      "SEO action plan",
+      "Optimised pages"
+    ],
+    "cta_label": "Request an SEO audit"
+  }
+}

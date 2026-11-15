@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { contact, profile, seo } from '../lib/content';
+import { localize, routes, ui, type Lang } from '../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const L = ui[lang];
+const F = L.form;
+const C = localize<any>(contact, lang);
+const S = localize<any>(seo, lang);
+const cv = (lang === 'en' && profile.cv_en) || profile.cv_fr || profile.cv_en;
+const socials = ((contact.socials as any[]) ?? []).filter((s) => s?.url);
+const title = lang === 'fr' ? 'Contact' : 'Contact';
+---
+<Base lang={lang} title={lang === 'fr' ? 'Me contacter' : 'Get in touch'} description={S.contact_description} path={routes.contact[lang]} altPath={routes.contact[lang === 'fr' ? 'en' : 'fr']}>
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">{title}</p>
+      <h1>{lang === 'fr' ? 'Travaillons ensemble' : 'Let’s work together'}</h1>
+      {C.intro && <p class="lead">{C.intro}</p>}
+    </div>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        {C.availability && <div class="availability"><span class="status-dot" aria-hidden="true"></span><span>{C.availability}</span></div>}
+        {contact.email && (
+          <div class="contact-item"><span class="icon-box"><Icon name="mail" /></span><div><small>{L.email}</small><a href={`mailto:${contact.email}`}>{contact.email}</a></div></div>
+        )}
+        {contact.phone && (
+          <div class="contact-item"><span class="icon-box"><Icon name="phone" /></span><div><small>{L.phone}</small><a href={`tel:${contact.phone.replace(/\s+/g, '')}`}>{contact.phone}</a></div></div>
+        )}
+        {contact.linkedin && (
+          <div class="contact-item"><span class="icon-box"><Icon name="linkedin" /></span><div><small>LinkedIn</small><a href={contact.linkedin} target="_blank" rel="noopener me">{lang === 'fr' ? 'Voir mon profil' : 'View my profile'}</a></div></div>
+        )}
+        {socials.map((s) => (
+          <div class="contact-item"><span class="icon-box"><Icon name="link" /></span><div><small>{L.follow}</small><a href={s.url} target="_blank" rel="noopener me">{s.label || s.url}</a></div></div>
+        ))}
+        {C.location && (
+          <div class="contact-item"><span class="icon-box"><Icon name="pin" /></span><div><small>{L.location}</small><span>{C.location}</span></div></div>
+        )}
+        {cv && <p><a class="btn btn--ghost" href={cv} download><Icon name="download" /> {L.downloadCv}</a></p>}
+      </div>
+
+      <div class="card form-card">
+        <h2>{F.title}</h2>
+        <form name="contact" method="POST" action={routes.thanks[lang]} data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="langue" value={lang} />
+          <p class="hp"><label>Ne pas remplir / Do not fill: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+          <fieldset class="field">
+            <legend>{F.requestType}</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="type_demande" value="Recrutement" checked data-type="recrutement" /><span>{F.recruit}<small>{F.recruitHint}</small></span></label>
+              <label class="choice"><input type="radio" name="type_demande" value="Freelance" data-type="freelance" /><span>{F.freelance}<small>{F.freelanceHint}</small></span></label>
+            </div>
+          </fieldset>
+
+          <div class="field-row">
+            <div class="field"><label for="f-name">{F.name}</label><input id="f-name" name="nom" type="text" autocomplete="name" required /></div>
+            <div class="field"><label for="f-email">{F.email}</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
+          </div>
+          <div class="field"><label for="f-company">{F.company}</label><input id="f-company" name="entreprise" type="text" autocomplete="organization" /></div>
+          <div class="field"><label for="f-message">{F.message}</label><textarea id="f-message" name="message" required></textarea></div>
+          <button class="btn btn--primary" type="submit">{F.send} <Icon name="arrow" /></button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  // Présélection du type de demande via ?type=freelance ou ?type=recrutement
+  const t = new URLSearchParams(location.search).get('type');
+  if (t) document.querySelector<HTMLInputElement>(`input[data-type="${CSS.escape(t)}"]`)?.click();
+</script>

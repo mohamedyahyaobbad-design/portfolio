@@ -1,0 +1,23 @@
+---
+import Icon from './Icon.astro';
+import { home } from '../lib/content';
+import { localize, routes, ui, type Lang } from '../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const H = localize<any>(home, lang);
+const L = ui[lang];
+---
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>{H.cta_title}</h2>
+        <p>{H.cta_text}</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--light" href={routes.contact[lang]}>{L.contactMe} <Icon name="arrow" /></a>
+        <a class="btn btn--outline-light" href={routes.projects[lang]}>{L.seeProjects}</a>
+      </div>
+    </div>
+  </div>
+</section>

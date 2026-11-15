@@ -1,0 +1,44 @@
+{
+  "title": "Accompagnement en marketing digital",
+  "icon": "compass",
+  "image": "",
+  "visible": true,
+  "order": 60,
+  "fr": {
+    "description": "Clarifier vos priorités et construire un plan d’action réaliste.",
+    "problem": "Vous savez qu’il faut être présent en ligne, mais vous ne savez pas quels leviers activer en premier.",
+    "solution": "Un diagnostic de votre présence digitale et une feuille de route priorisée : SEO, publicité, réseaux sociaux, site web.",
+    "prestations": [
+      "Diagnostic de la présence en ligne",
+      "Analyse de la concurrence",
+      "Choix des leviers prioritaires",
+      "Plan d’action et calendrier",
+      "Mise en place d’indicateurs de suivi"
+    ],
+    "deliverables": [
+      "Diagnostic écrit",
+      "Feuille de route marketing",
+      "Tableau de suivi"
+    ],
+    "cta_label": "Planifier un échange"
+  },
+  "en": {
+    "title": "Digital marketing support",
+    "description": "Clarify your priorities and build a realistic action plan.",
+    "problem": "You know you need to be online, but you don’t know which channels to activate first.",
+    "solution": "A diagnosis of your digital presence and a prioritised roadmap: SEO, ads, social media, website.",
+    "prestations": [
+      "Online presence diagnosis",
+      "Competitor analysis",
+      "Choice of priority channels",
+      "Action plan and timeline",
+      "Tracking KPIs setup"
+    ],
+    "deliverables": [
+      "Written diagnosis",
+      "Marketing roadmap",
+      "Tracking dashboard"
+    ],
+    "cta_label": "Book a call"
+  }
+}

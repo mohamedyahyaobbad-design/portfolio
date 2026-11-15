@@ -1,0 +1,15 @@
+{
+  "name": "WordPress",
+  "logo": "",
+  "category": "cms",
+  "level": "",
+  "url": "https://wordpress.org",
+  "visible": true,
+  "order": 10,
+  "fr": {
+    "description": "CMS de référence pour créer et gérer des sites web."
+  },
+  "en": {
+    "description": "The leading CMS to build and manage websites."
+  }
+}
