@@ -56,7 +56,7 @@ collections:
       - { label: "Publié sur le site", name: published, widget: boolean, default: false, hint: "Désactivé = brouillon, invisible sur le site." }
       - { label: "Mettre en avant sur l’accueil", name: featured, widget: boolean, default: false, required: false }
       - { label: "Ordre d’affichage", name: order, widget: number, default: 10, value_type: int, required: false, hint: "Plus le nombre est petit, plus le projet apparaît en premier." }
-      - { label: "Catégorie", name: category, widget: select, options: &project_categories [{ label: "SEO", value: "seo" }, { label: "Google Ads", value: "google-ads" }, { label: "Meta Ads", value: "meta-ads" }, { label: "E-commerce", value: "ecommerce" }, { label: "Shopify", value: "shopify" }, { label: "WordPress", value: "wordpress" }, { label: "Design & Communication", value: "design" }] }
+      - { label: "Catégorie", name: category, widget: select, options: &project_categories [{ label: "SEO", value: "seo" }, { label: "Google Ads", value: "google-ads" }, { label: "Meta Ads", value: "meta-ads" }, { label: "Réseaux sociaux", value: "social-media" }, { label: "E-commerce", value: "ecommerce" }, { label: "Shopify", value: "shopify" }, { label: "WordPress", value: "wordpress" }, { label: "Design & Communication", value: "design" }] }
       - label: "Type de projet"
         name: type
         widget: select

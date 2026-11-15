@@ -20,6 +20,7 @@ export const projectCategories: { id: string; fr: string; en: string }[] = [
   { id: 'seo', fr: 'SEO', en: 'SEO' },
   { id: 'google-ads', fr: 'Google Ads', en: 'Google Ads' },
   { id: 'meta-ads', fr: 'Meta Ads', en: 'Meta Ads' },
+  { id: 'social-media', fr: 'Réseaux sociaux', en: 'Social Media' },
   { id: 'ecommerce', fr: 'E-commerce', en: 'E-commerce' },
   { id: 'shopify', fr: 'Shopify', en: 'Shopify' },
   { id: 'wordpress', fr: 'WordPress', en: 'WordPress' },
