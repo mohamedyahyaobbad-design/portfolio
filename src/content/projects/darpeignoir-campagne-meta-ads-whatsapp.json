@@ -1,0 +1,72 @@
+{
+  "title": "Darpeignoir — Campagne Meta Ads vers WhatsApp",
+  "published": true,
+  "featured": true,
+  "order": 2,
+  "category": "meta-ads",
+  "type": "freelance",
+  "period": "Oct. – nov. 2026",
+  "context_label": "Campagne pour un client : marque de peignoirs et de couvertures au Maroc",
+  "context_label_en": "Client campaign: bathrobe and blanket brand in Morocco",
+  "cover": "/uploads/projets/darpeignoir/darpeignoir-publicites-facebook-instagram.jpg",
+  "gallery": [
+    {
+      "image": "/uploads/projets/darpeignoir/darpeignoir-meta-ads-resultats-conversations.jpg",
+      "caption": "Gestionnaire de publicités : 70 conversations à 0,07 $ par conversation",
+      "caption_en": "Ads Manager: 70 conversations at $0.07 per conversation"
+    },
+    {
+      "image": "/uploads/projets/darpeignoir/darpeignoir-meta-ads-budget-impressions-couverture.jpg",
+      "caption": "Budget de 5 $, 4,92 $ dépensés, 4 485 impressions et 3 168 personnes touchées",
+      "caption_en": "$5 budget, $4.92 spent, 4,485 impressions and 3,168 people reached"
+    },
+    {
+      "image": "/uploads/projets/darpeignoir/darpeignoir-meta-ads-budget-campagne-advantage-cbo.jpg",
+      "caption": "Stratégie budgétaire : budget de campagne Advantage+ (CBO)",
+      "caption_en": "Budget strategy: Advantage+ campaign budget (CBO)"
+    },
+    {
+      "image": "/uploads/projets/darpeignoir/darpeignoir-publicites-carrousel-whatsapp.jpg",
+      "caption": "Publicités en carrousel avec bouton « Discuter sur WhatsApp »",
+      "caption_en": "Carousel ads with a “Chat on WhatsApp” button"
+    },
+    {
+      "image": "/uploads/projets/darpeignoir/darpeignoir-publicites-facebook-instagram.jpg",
+      "caption": "Aperçus des publicités sur Facebook et Instagram",
+      "caption_en": "Ad previews on Facebook and Instagram"
+    }
+  ],
+  "tools": ["meta-business-suite"],
+  "links": [],
+  "fr": {
+    "summary": "Campagne Meta Ads (objectif Ventes, budget de campagne CBO) pour une marque marocaine de peignoirs : 70 conversations WhatsApp obtenues pour 4,92 $ dépensés, soit 0,07 $ par conversation.",
+    "cover_alt": "Aperçus des publicités Darpeignoir sur Facebook et Instagram, avec bouton Discuter sur WhatsApp",
+    "presentation": "Pour un client, la marque **Darpeignoir** (peignoirs et couvertures), j’ai créé et piloté une campagne **Meta Ads** diffusée sur Facebook et Instagram. L’objectif : générer des ventes en faisant démarrer des **conversations sur WhatsApp**, le canal de vente privilégié de la marque.",
+    "context": "Au Maroc, beaucoup de clients préfèrent commander par message. Le client vend donc ses produits (peignoirs « de qualité turque », couvertures) directement via WhatsApp. La campagne devait amener des prospects qualifiés dans cette conversation, avec un budget très limité.",
+    "problem": "Comment obtenir un maximum de **conversations de vente** sur WhatsApp avec un budget de seulement **5 $** ?",
+    "objectives": "- Générer des conversations WhatsApp avec des acheteurs potentiels.\n- Obtenir un coût par conversation le plus bas possible.\n- Mettre en avant plusieurs produits dans une même publicité.",
+    "methodology": "1. Création de la campagne dans le Gestionnaire de publicités Meta avec l’objectif **Ventes** et WhatsApp comme lieu de conversion.\n2. Choix de la stratégie **Budget de la campagne (Advantage+ / CBO)** : Meta répartit automatiquement le budget vers les meilleures opportunités.\n3. Création des publicités en **carrousel**, avec le bouton « Discuter sur WhatsApp ».\n4. Diffusion sur Facebook et Instagram, puis analyse des résultats (attribution : 7 jours après le clic).",
+    "strategy": "- **CBO (budget de campagne Advantage+)** pour laisser l’algorithme concentrer le budget sur ce qui performe le mieux.\n- **Carrousel multi-produits** (peignoirs de plusieurs couleurs, couvertures) pour multiplier les chances d’intérêt.\n- **Hashtags locaux** dans les textes (#peignoir_maroc, #couverture_maroc, #maroc).\n- **Appel à l’action direct** vers WhatsApp, pour supprimer les étapes entre la publicité et la vente.",
+    "work": "- Paramétrage de la campagne, de l’objectif et de la stratégie budgétaire.\n- Création des publicités en carrousel pour Facebook et Instagram.\n- Rédaction des textes et choix des hashtags.\n- Suivi des résultats dans le Gestionnaire de publicités.",
+    "results": "**Résultats de la campagne (terminée le 2 novembre 2026) :**\n\n- **70 conversations** démarrées sur WhatsApp\n- **0,07 $ par conversation**\n- **4,92 $ dépensés** sur un budget de 5 $\n- **4 485 impressions**\n- **3 168 personnes touchées**\n\nCalculés à partir de ces chiffres : un CPM d’environ **1,10 $** et une répétition moyenne d’environ **1,4** affichage par personne.",
+    "conclusion": "Avec un budget de 5 $, la campagne a généré 70 conversations de vente, ce qui montre l’efficacité d’un parcours court (publicité vers WhatsApp) sur le marché marocain. Prochaine étape : suivre le taux de conversion des conversations en commandes, pour mesurer le retour sur investissement réel.",
+    "seo_title": "Campagne Meta Ads WhatsApp : 70 conversations à 0,07 $ | Étude de cas",
+    "seo_description": "Campagne Meta Ads (objectif Ventes, CBO) pour une marque marocaine de peignoirs : 70 conversations WhatsApp pour 4,92 $, soit 0,07 $ par conversation."
+  },
+  "en": {
+    "title": "Darpeignoir — Meta Ads campaign to WhatsApp",
+    "summary": "Meta Ads campaign (Sales objective, CBO campaign budget) for a Moroccan bathrobe brand: 70 WhatsApp conversations for $4.92 spent, i.e. $0.07 per conversation.",
+    "cover_alt": "Darpeignoir ad previews on Facebook and Instagram, with a Chat on WhatsApp button",
+    "presentation": "For a client, the **Darpeignoir** brand (bathrobes and blankets), I created and managed a **Meta Ads** campaign on Facebook and Instagram. The goal: drive sales by starting **WhatsApp conversations**, the brand’s preferred sales channel.",
+    "context": "In Morocco, many customers prefer to order by message. The client therefore sells its products (“Turkish-quality” bathrobes, blankets) directly via WhatsApp. The campaign had to bring qualified prospects into that conversation, on a very small budget.",
+    "problem": "How to get as many **sales conversations** on WhatsApp as possible with a budget of only **$5**?",
+    "objectives": "- Generate WhatsApp conversations with potential buyers.\n- Keep the cost per conversation as low as possible.\n- Showcase several products in a single ad.",
+    "methodology": "1. Created the campaign in Meta Ads Manager with the **Sales** objective and WhatsApp as the conversion location.\n2. Chose the **Campaign budget (Advantage+ / CBO)** strategy: Meta automatically allocates budget to the best opportunities.\n3. Built **carousel** ads with a “Chat on WhatsApp” button.\n4. Ran the ads on Facebook and Instagram, then analysed results (7-day click attribution).",
+    "strategy": "- **CBO (Advantage+ campaign budget)** to let the algorithm focus spend on what performs best.\n- **Multi-product carousel** (bathrobes in several colours, blankets) to increase the chances of interest.\n- **Local hashtags** in the copy (#peignoir_maroc, #couverture_maroc, #maroc).\n- **Direct call to action** to WhatsApp, removing steps between the ad and the sale.",
+    "work": "- Set up the campaign, objective and budget strategy.\n- Built carousel ads for Facebook and Instagram.\n- Wrote the ad copy and chose hashtags.\n- Tracked results in Ads Manager.",
+    "results": "**Campaign results (ended 2 November 2026):**\n\n- **70 conversations** started on WhatsApp\n- **$0.07 per conversation**\n- **$4.92 spent** out of a $5 budget\n- **4,485 impressions**\n- **3,168 people reached**\n\nCalculated from these figures: a CPM of about **$1.10** and an average frequency of about **1.4** views per person.",
+    "conclusion": "With a $5 budget, the campaign generated 70 sales conversations, showing how effective a short journey (ad to WhatsApp) can be in the Moroccan market. Next step: track how many conversations turn into orders, to measure the real return on ad spend.",
+    "seo_title": "Meta Ads WhatsApp campaign: 70 conversations at $0.07 | Case study",
+    "seo_description": "Meta Ads campaign (Sales objective, CBO) for a Moroccan bathrobe brand: 70 WhatsApp conversations for $4.92, i.e. $0.07 per conversation."
+  }
+}

@@ -2,7 +2,7 @@
   "title": "SoftSphere — Boutique Shopify en dropshipping",
   "published": true,
   "featured": true,
-  "order": 3,
+  "order": 4,
   "category": "ecommerce",
   "type": "",
   "period": "",
@@ -31,7 +31,9 @@
       "caption_en": "Shopify admin: Trade theme and 30-day Web Vitals"
     }
   ],
-  "tools": ["shopify"],
+  "tools": [
+    "shopify"
+  ],
   "links": [
     {
       "label": "Voir la boutique en ligne",
