@@ -46,8 +46,11 @@ const jsonld = {
 <Base lang={lang} title={S.home_title} path={routes.home[lang]} altPath={routes.home[lang === 'fr' ? 'en' : 'fr']} jsonld={jsonld}>
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-grid">
+    <div class:list={['container', 'hero-grid', { 'hero-grid--solo': !profile.photo }]}>
       <div>
+        {!profile.photo && C.availability && (
+          <p class="availability-pill"><span class="status-dot" aria-hidden="true"></span>{lang === 'fr' ? 'Disponible : stage PFE & freelance' : 'Available: internship & freelance'}</p>
+        )}
         <p class="eyebrow">{P.job_title}</p>
         <h1>{H.hero_title}</h1>
         {H.hero_intro && <p class="lead">{H.hero_intro}</p>}
@@ -61,13 +64,13 @@ const jsonld = {
           <a class="btn btn--ghost" href={routes.contact[lang]}>{L.contactMe}</a>
         </div>
       </div>
-      <div class="hero-media">
+      {profile.photo && <div class="hero-media">
         <Portrait lang={lang} eager>
           {C.availability && (
             <div class="portrait-card"><span class="status-dot" aria-hidden="true"></span><span>{lang === 'fr' ? 'Disponible : stage PFE & freelance' : 'Available: internship & freelance'}</span></div>
           )}
         </Portrait>
-      </div>
+      </div>}
     </div>
   </section>
 

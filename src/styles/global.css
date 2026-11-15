@@ -156,6 +156,10 @@ ul, ol { padding-left: 1.2em; }
 .portrait-placeholder span { font-size: clamp(3rem, 7vw, 5rem); font-weight: 700; letter-spacing: -0.04em; opacity: 0.85; }
 .portrait-card { position: absolute; left: -1.25rem; bottom: 1.5rem; background: #fff; border-radius: 14px; padding: 0.8rem 1rem; box-shadow: var(--shadow); font-size: 0.85rem; display: flex; gap: 0.6rem; align-items: center; color: var(--text); font-weight: 600; max-width: 85%; }
 .status-dot { width: 9px; height: 9px; flex: none; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 4px rgb(22 163 74 / 0.15); }
+.hero-grid--solo { grid-template-columns: 1fr; }
+.hero-grid--solo h1 { max-width: 20ch; }
+.hero-grid--solo .lead { max-width: 68ch; }
+.availability-pill { display: inline-flex; align-items: center; gap: 0.6rem; margin: 0 0 1.5rem; padding: 0.45rem 0.9rem; border-radius: 999px; background: #f0fdf4; color: #14532d; font-size: 0.88rem; font-weight: 600; }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-media { max-width: 360px; order: -1; }

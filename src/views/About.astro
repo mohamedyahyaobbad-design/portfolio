@@ -34,8 +34,8 @@ const blocks = [
   <section class="section section--tight">
     <div class="container about-grid">
       <div class="stack">
-        <Portrait lang={lang} eager />
-        {C.availability && <div class="availability mt-2"><span class="status-dot" aria-hidden="true"></span><span>{C.availability}</span></div>}
+        {profile.photo && <Portrait lang={lang} eager />}
+        {C.availability && <div class="availability"><span class="status-dot" aria-hidden="true"></span><span>{C.availability}</span></div>}
         <div class="btn-row">
           {cv && <a class="btn btn--primary" href={cv} download><Icon name="download" /> {L.downloadCv}</a>}
           <a class="btn btn--ghost" href={routes.contact[lang]}>{L.contactMe}</a>
