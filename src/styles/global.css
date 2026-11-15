@@ -159,7 +159,7 @@ ul, ol { padding-left: 1.2em; }
 .hero-grid--solo { grid-template-columns: 1fr; }
 .hero-grid--solo h1 { max-width: 20ch; }
 .hero-grid--solo .lead { max-width: 68ch; }
-.availability-pill { display: inline-flex; align-items: center; gap: 0.6rem; margin: 0 0 1.5rem; padding: 0.45rem 0.9rem; border-radius: 999px; background: #f0fdf4; color: #14532d; font-size: 0.88rem; font-weight: 600; }
+.availability-pill { display: flex; width: fit-content; align-items: center; gap: 0.6rem; margin: 0 0 1.5rem; padding: 0.45rem 0.9rem; border-radius: 999px; background: #f0fdf4; color: #14532d; font-size: 0.88rem; font-weight: 600; }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-media { max-width: 360px; order: -1; }
