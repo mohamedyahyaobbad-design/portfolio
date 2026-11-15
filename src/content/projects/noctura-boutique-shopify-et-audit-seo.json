@@ -1,0 +1,86 @@
+{
+  "title": "Noctura — Boutique Shopify et audit SEO",
+  "published": true,
+  "featured": true,
+  "order": 1,
+  "category": "shopify",
+  "type": "personnel",
+  "period": "Novembre 2026",
+  "context_label": "Boutique e-commerce d’une marque de patch sommeil connecté — marché marocain",
+  "context_label_en": "E-commerce store for a connected sleep patch brand — Moroccan market",
+  "cover": "/uploads/projets/noctura/noctura-boutique-shopify-accueil.jpg",
+  "gallery": [
+    {
+      "image": "/uploads/projets/noctura/noctura-boutique-shopify-accueil.jpg",
+      "caption": "Page d’accueil de la boutique Shopify Noctura",
+      "caption_en": "Noctura Shopify store home page"
+    },
+    {
+      "image": "/uploads/projets/noctura/noctura-pagespeed-insights-bureau.jpg",
+      "caption": "PageSpeed Insights (bureau) : 99 en performances, 100 en SEO",
+      "caption_en": "PageSpeed Insights (desktop): 99 performance, 100 SEO"
+    },
+    {
+      "image": "/uploads/projets/noctura/noctura-resultat-google-patch-sommeil-maroc.jpg",
+      "caption": "Résultat Google pour la requête « patch de sommeil connecté maroc »",
+      "caption_en": "Google result for the query “patch de sommeil connecté maroc”"
+    },
+    {
+      "image": "/uploads/projets/noctura/noctura-screaming-frog-meta-descriptions.jpg",
+      "caption": "Crawl Screaming Frog : contrôle des meta descriptions sur 18 URL",
+      "caption_en": "Screaming Frog crawl: meta description check across 18 URLs"
+    },
+    {
+      "image": "/uploads/projets/noctura/noctura-wappalyzer-technologies.jpg",
+      "caption": "Wappalyzer : technologies et outils de suivi détectés",
+      "caption_en": "Wappalyzer: detected technologies and tracking tools"
+    }
+  ],
+  "tools": [
+    "shopify",
+    "pagespeed-insights",
+    "screaming-frog-seo-spider",
+    "wappalyzer"
+  ],
+  "links": [
+    {
+      "label": "Voir la boutique en ligne",
+      "label_en": "Visit the online store",
+      "url": "https://noctura-sleep-store.myshopify.com/",
+      "kind": "link"
+    }
+  ],
+  "fr": {
+    "summary": "Création d’une boutique Shopify pour Noctura, un patch sommeil connecté vendu au Maroc, puis audit SEO et technique du site avec PageSpeed Insights, Screaming Frog et Wappalyzer.",
+    "cover_alt": "Page d’accueil de la boutique Shopify Noctura : « Le patch sommeil connecté, pour des nuits en équilibre »",
+    "presentation": "Noctura est une marque de **patch sommeil aux huiles essentielles, connecté à une application** de suivi du sommeil, vendue au Maroc. J’ai construit sa boutique Shopify, puis j’ai audité le site pour vérifier sa visibilité sur Google, ses performances et sa configuration technique.",
+    "context": "La boutique s’adresse au marché marocain : prix en dirhams (packs dès 249 DH), livraison partout au Maroc et contact via WhatsApp. Le site est organisé autour d’un produit phare, avec les pages Accueil, Nos packs, Comment ça marche, Notre technologie, FAQ et Contact.",
+    "problem": "Un produit innovant est peu connu : les clients ne le cherchent pas par son nom. Il faut donc que la boutique **inspire confiance**, se charge vite et **apparaisse sur Google** pour les recherches liées au besoin, comme « patch de sommeil connecté Maroc ».",
+    "objectives": "- Créer une boutique Shopify claire, rassurante et orientée conversion.\n- Positionner la boutique sur les requêtes liées au patch sommeil au Maroc.\n- Obtenir de bons scores de performance et de SEO technique.\n- Mettre en place les outils de suivi nécessaires aux futures campagnes publicitaires.",
+    "analysis": "J’ai analysé le site avec quatre outils complémentaires :\n\n- **PageSpeed Insights** (bureau) pour la performance, l’accessibilité, les bonnes pratiques et le SEO technique.\n- **Screaming Frog SEO Spider** pour crawler le site (18 URL HTML) et contrôler les balises Title et Meta Description.\n- **Wappalyzer** pour vérifier les technologies installées et les outils de suivi.\n- **Google** pour contrôler l’affichage du site dans les résultats sur la requête cible.",
+    "methodology": "1. Construction de la boutique sur Shopify : structure des pages, mise en avant du produit et des packs, éléments de réassurance.\n2. Optimisation des contenus pour la requête cible : titre et description de la page d’accueil centrés sur « patch sommeil connecté » et « livraison au Maroc ».\n3. Audit technique et SEO avec les outils ci-dessus.\n4. Liste des corrections à apporter, classées par priorité.",
+    "strategy": "Miser sur une **requête de besoin** très ciblée (patch sommeil connecté + Maroc) plutôt que sur le nom de la marque, encore inconnu. La balise Title de l’accueil associe la marque, le bénéfice et l’argument local : « NOCTURA | Patch sommeil connecté – Livraison au Maroc ».\n\nCôté acquisition, les outils de mesure (Google Analytics GA4, Google Tag Manager, Pixel Facebook) sont en place pour préparer des campagnes Google Ads et Meta Ads.",
+    "work": "- Mise en place de la boutique Shopify et de ses pages (accueil, packs, fonctionnement, technologie, FAQ, contact, pages légales).\n- Optimisation de la balise Title et de la meta description de la page d’accueil.\n- Vérification des outils de suivi en place : Google Tag Manager, Google Analytics (GA4), Pixel Facebook et chat WhatsApp Business.\n- Crawl complet du site et relevé des points à corriger.",
+    "results": "**Scores PageSpeed Insights (bureau, 11 novembre 2026) :**\n\n- Performances : **99/100**\n- Accessibilité : **97/100**\n- Bonnes pratiques : **96/100**\n- SEO : **100/100**\n\n**Visibilité :** lors de mon contrôle, la boutique apparaissait en **premier résultat naturel** sur Google pour la requête « patch de sommeil connecté maroc ».\n\n**Points à corriger relevés par Screaming Frog (18 URL) :**\n\n- 1 page sans meta description.\n- 1 meta description trop longue (plus de 155 caractères).\n- Aucune meta description en double.\n- Balise Title de la page collection trop courte et peu descriptive (« Produits – NOCTURA », 19 caractères).",
+    "conclusion": "Ce projet m’a permis de relier la **création d’une boutique e-commerce** à son **référencement** : une base technique solide et un ciblage précis permettent d’être visible rapidement sur une niche. Prochaines étapes : corriger les balises relevées, mesurer les scores sur mobile et lancer les premières campagnes Meta Ads et Google Ads.",
+    "seo_title": "Noctura : boutique Shopify et audit SEO | Étude de cas",
+    "seo_description": "Création de la boutique Shopify Noctura (patch sommeil connecté, Maroc) et audit SEO : PageSpeed 99/100, SEO 100/100, analyse Screaming Frog et Wappalyzer."
+  },
+  "en": {
+    "title": "Noctura — Shopify store & SEO audit",
+    "summary": "Building a Shopify store for Noctura, a connected sleep patch sold in Morocco, then an SEO and technical audit of the site with PageSpeed Insights, Screaming Frog and Wappalyzer.",
+    "cover_alt": "Noctura Shopify store home page: “The connected sleep patch, for balanced nights”",
+    "presentation": "Noctura is a brand of **essential-oil sleep patches connected to a sleep-tracking app**, sold in Morocco. I built its Shopify store, then audited the site to check its Google visibility, performance and technical setup.",
+    "context": "The store targets the Moroccan market: prices in dirhams (packs from 249 DH), delivery across Morocco and WhatsApp contact. The site is built around one hero product, with Home, Packs, How it works, Technology, FAQ and Contact pages.",
+    "problem": "An innovative product is not well known: customers don’t search for it by name. The store therefore needs to **build trust**, load fast and **show up on Google** for need-based searches such as “connected sleep patch Morocco”.",
+    "objectives": "- Build a clear, trustworthy, conversion-oriented Shopify store.\n- Rank the store for sleep-patch searches in Morocco.\n- Achieve strong performance and technical SEO scores.\n- Set up the tracking tools needed for future ad campaigns.",
+    "analysis": "I analysed the site with four complementary tools:\n\n- **PageSpeed Insights** (desktop) for performance, accessibility, best practices and technical SEO.\n- **Screaming Frog SEO Spider** to crawl the site (18 HTML URLs) and check title tags and meta descriptions.\n- **Wappalyzer** to check installed technologies and tracking tools.\n- **Google** to check how the site appears in results for the target query.",
+    "methodology": "1. Building the store on Shopify: page structure, product and pack highlights, trust elements.\n2. Optimising content for the target query: home page title and description focused on “connected sleep patch” and “delivery in Morocco”.\n3. Technical and SEO audit with the tools above.\n4. A prioritised list of fixes.",
+    "strategy": "Target a very specific **need-based query** (connected sleep patch + Morocco) rather than the still-unknown brand name. The home page title tag combines the brand, the benefit and the local angle: “NOCTURA | Patch sommeil connecté – Livraison au Maroc”.\n\nFor acquisition, measurement tools (Google Analytics GA4, Google Tag Manager, Facebook Pixel) are in place to prepare Google Ads and Meta Ads campaigns.",
+    "work": "- Set up the Shopify store and its pages (home, packs, how it works, technology, FAQ, contact, legal pages).\n- Optimised the home page title tag and meta description.\n- Checked the tracking tools in place: Google Tag Manager, Google Analytics (GA4), Facebook Pixel and WhatsApp Business chat.\n- Full site crawl and list of issues to fix.",
+    "results": "**PageSpeed Insights scores (desktop, 11 November 2026):**\n\n- Performance: **99/100**\n- Accessibility: **97/100**\n- Best practices: **96/100**\n- SEO: **100/100**\n\n**Visibility:** when I checked, the store appeared as the **first organic result** on Google for the query “patch de sommeil connecté maroc”.\n\n**Issues found by Screaming Frog (18 URLs):**\n\n- 1 page with no meta description.\n- 1 meta description that is too long (over 155 characters).\n- No duplicate meta descriptions.\n- Collection page title tag too short and vague (“Produits – NOCTURA”, 19 characters).",
+    "conclusion": "This project connected **e-commerce store building** with **search visibility**: a solid technical base and precise targeting make it possible to become visible quickly in a niche. Next steps: fix the flagged tags, measure mobile scores and launch the first Meta Ads and Google Ads campaigns.",
+    "seo_title": "Noctura: Shopify store & SEO audit | Case study",
+    "seo_description": "Building the Noctura Shopify store (connected sleep patch, Morocco) and SEO audit: PageSpeed 99/100, SEO 100/100, Screaming Frog and Wappalyzer analysis."
+  }
+}

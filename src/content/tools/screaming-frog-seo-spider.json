@@ -1,0 +1,15 @@
+{
+  "name": "Screaming Frog SEO Spider",
+  "logo": "",
+  "category": "seo",
+  "level": "",
+  "url": "https://www.screamingfrog.co.uk/seo-spider/",
+  "visible": true,
+  "order": 100,
+  "fr": {
+    "description": "Crawl d’un site pour auditer balises, liens, codes de réponse et structure."
+  },
+  "en": {
+    "description": "Crawls a website to audit tags, links, response codes and structure."
+  }
+}

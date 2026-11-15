@@ -1,0 +1,15 @@
+{
+  "name": "PageSpeed Insights",
+  "logo": "",
+  "category": "seo",
+  "level": "",
+  "url": "https://pagespeed.web.dev",
+  "visible": true,
+  "order": 90,
+  "fr": {
+    "description": "Mesure de la performance, de l’accessibilité et du SEO technique d’une page."
+  },
+  "en": {
+    "description": "Measures a page’s performance, accessibility and technical SEO."
+  }
+}
