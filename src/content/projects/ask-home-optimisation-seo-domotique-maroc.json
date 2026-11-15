@@ -12,8 +12,8 @@
   "gallery": [
     {
       "image": "/uploads/projets/ask-home/ask-home-google-domotique-maroc-2e-position.jpg",
-      "caption": "Google, requête « domotique maroc » : askhome.ma en 2e position de la page 1",
-      "caption_en": "Google, query “domotique maroc”: askhome.ma ranked 2nd on page 1"
+      "caption": "2e position Google sur « domotique maroc »",
+      "caption_en": "Ranked 2nd on Google for “domotique maroc”"
     },
     {
       "image": "/uploads/projets/ask-home/ask-home-accueil-domotique-maroc.jpg",
@@ -22,13 +22,13 @@
     },
     {
       "image": "/uploads/projets/ask-home/ask-home-h1-domotique-casablanca-rabat-marrakech.jpg",
-      "caption": "Titre H1 et texte optimisés autour de « domotique » et des villes ciblées",
-      "caption_en": "H1 and copy optimised around “domotique” and the target cities"
+      "caption": "Titre H1 optimisé",
+      "caption_en": "Optimised H1 heading"
     },
     {
       "image": "/uploads/projets/ask-home/ask-home-section-la-domotique-c-est-quoi.jpg",
-      "caption": "Section pédagogique « La domotique, c’est quoi ? »",
-      "caption_en": "Educational section “What is home automation?”"
+      "caption": "Section « La domotique, c’est quoi ? »",
+      "caption_en": "“What is home automation?” section"
     }
   ],
   "tools": [
@@ -45,36 +45,24 @@
     }
   ],
   "fr": {
-    "summary": "Optimisation SEO du site d’Ask Home, spécialiste de la domotique au Maroc : recherche de mots-clés, titres H1/H2, contenus et visuels. Le site apparaît en 2e position sur la page 1 de Google pour « domotique maroc ».",
+    "summary": "Optimisation SEO du site d’Ask Home, spécialiste de la domotique au Maroc : le site se classe 2e sur la page 1 de Google pour « domotique maroc ».",
     "cover_alt": "Page d’accueil d’Ask Home : « Éclairage intelligent et connecté »",
-    "presentation": "Ask Home est une entreprise marocaine spécialisée dans la **domotique et la maison connectée** (éclairage, sécurité, volets, sonorisation), avec des interventions à Casablanca, Rabat, Marrakech et partout au Maroc. J’ai optimisé le référencement naturel de son site : mots-clés, structure des titres, contenus et visuels.",
-    "context": "La domotique est un marché concurrentiel au Maroc. Les clients cherchent un prestataire sur Google avec des requêtes génériques comme « domotique maroc » ou des requêtes locales associées à une ville. Le site devait mieux répondre à ces recherches pour générer des demandes de devis.",
-    "problem": "Comment faire apparaître le site en première page de Google sur la requête principale du secteur, **« domotique maroc »**, face à des concurrents directs ?",
-    "objectives": "- Identifier les mots-clés et les questions réellement recherchés par les clients.\n- Structurer les pages avec des titres H1 et H2 pertinents.\n- Améliorer les contenus et les visuels pour mieux répondre à l’intention de recherche.\n- Gagner en visibilité sur la requête « domotique maroc ».",
-    "analysis": "- **AnswerThePublic** : questions et formulations utilisées par les internautes autour de la domotique (par exemple « la domotique, c’est quoi ? »).\n- **Semrush** : recherche de mots-clés et analyse du positionnement.\n- **Similarweb** : analyse du trafic et comparaison avec les sites concurrents.",
-    "methodology": "1. Recherche de mots-clés et de questions avec AnswerThePublic et Semrush.\n2. Analyse de la concurrence avec Similarweb et dans les résultats de Google.\n3. Réécriture des titres H1 et H2 avec les mots-clés retenus.\n4. Optimisation des contenus et des visuels des pages.\n5. Contrôle du positionnement sur Google.",
-    "strategy": "Associer le mot-clé principal **« domotique »** aux **villes ciblées** (Casablanca, Rabat, Marrakech) et au **Maroc**, et répondre aux questions des internautes avec des sections pédagogiques. Exemples de titres :\n\n- H1 : « Ask Home : leader de la domotique & maison connectée à Casablanca, Rabat & Marrakech »\n- H2 : « Nos solutions et services d’installation connectée »\n- Section : « La domotique, c’est quoi ? »",
-    "work": "- Optimisation des titres H1 et H2 avec des mots-clés pertinents.\n- Optimisation des contenus textuels des pages.\n- Optimisation des visuels.",
-    "results": "Lors de mon contrôle, le site **askhome.ma apparaît en 2e position sur la page 1 de Google** pour la requête « domotique maroc », juste derrière un concurrent direct.",
-    "conclusion": "Ce projet montre l’intérêt d’une démarche SEO fondée sur les données : partir des recherches réelles des clients (AnswerThePublic, Semrush), observer la concurrence (Similarweb), puis structurer les titres et les contenus en conséquence.",
     "seo_title": "Ask Home : optimisation SEO « domotique Maroc » | Étude de cas",
-    "seo_description": "Optimisation SEO d’askhome.ma : mots-clés, titres H1/H2, contenus et visuels avec AnswerThePublic, Semrush et Similarweb. 2e position Google sur « domotique maroc »."
+    "seo_description": "Optimisation SEO d’askhome.ma : mots-clés, titres H1/H2, contenus et visuels avec AnswerThePublic, Semrush et Similarweb. 2e position Google sur « domotique maroc ».",
+    "context": "Ask Home installe des solutions de maison connectée à Casablanca, Rabat, Marrakech et dans tout le Maroc, sur un marché concurrentiel.",
+    "objectives": "- Gagner en visibilité sur « domotique maroc ».\n- Mieux répondre aux recherches réelles des clients.",
+    "methodology": "1. Recherche de mots-clés et de questions avec **AnswerThePublic** et **Semrush**.\n2. Analyse de la concurrence avec **Similarweb**.\n3. Réécriture des titres H1 et H2 autour de « domotique » et des villes ciblées.\n4. Optimisation des contenus et des visuels.",
+    "results": "- **2e position sur la page 1 de Google** pour « domotique maroc »\n- Titres structurés autour des mots-clés : « Ask Home : leader de la domotique & maison connectée à Casablanca, Rabat & Marrakech »"
   },
   "en": {
     "title": "Ask Home — SEO for “domotique Maroc”",
-    "summary": "SEO optimisation of the website of Ask Home, a home automation specialist in Morocco: keyword research, H1/H2 headings, content and visuals. The site ranks 2nd on Google’s first page for “domotique maroc”.",
+    "summary": "SEO optimisation of the website of Ask Home, a home automation specialist in Morocco: the site ranks 2nd on Google’s first page for “domotique maroc”.",
     "cover_alt": "Ask Home home page: “Smart, connected lighting”",
-    "presentation": "Ask Home is a Moroccan company specialising in **home automation and smart homes** (lighting, security, shutters, audio), working in Casablanca, Rabat, Marrakech and across Morocco. I optimised its website’s organic search: keywords, heading structure, content and visuals.",
-    "context": "Home automation is a competitive market in Morocco. Customers look for a provider on Google with generic queries such as “domotique maroc” or local queries combined with a city. The site needed to answer these searches better to generate quote requests.",
-    "problem": "How to get the site onto Google’s first page for the sector’s main query, **“domotique maroc”**, against direct competitors?",
-    "objectives": "- Identify the keywords and questions customers actually search for.\n- Structure pages with relevant H1 and H2 headings.\n- Improve content and visuals to better match search intent.\n- Gain visibility on the query “domotique maroc”.",
-    "analysis": "- **AnswerThePublic**: questions and phrasing people use around home automation (e.g. “what is home automation?”).\n- **Semrush**: keyword research and ranking analysis.\n- **Similarweb**: traffic analysis and comparison with competing websites.",
-    "methodology": "1. Keyword and question research with AnswerThePublic and Semrush.\n2. Competitor analysis with Similarweb and in Google results.\n3. Rewriting H1 and H2 headings with the selected keywords.\n4. Optimising page content and visuals.\n5. Checking rankings on Google.",
-    "strategy": "Pair the main keyword **“domotique”** with the **target cities** (Casablanca, Rabat, Marrakech) and **Morocco**, and answer people’s questions with educational sections. Example headings (in French on the site):\n\n- H1: “Ask Home: leader in home automation & smart homes in Casablanca, Rabat & Marrakech”\n- H2: “Our connected installation solutions and services”\n- Section: “What is home automation?”",
-    "work": "- Optimised H1 and H2 headings with relevant keywords.\n- Optimised page copy.\n- Optimised visuals.",
-    "results": "When I checked, **askhome.ma ranked 2nd on Google’s first page** for the query “domotique maroc”, just behind a direct competitor.",
-    "conclusion": "This project shows the value of a data-driven SEO approach: start from customers’ real searches (AnswerThePublic, Semrush), study the competition (Similarweb), then structure headings and content accordingly.",
     "seo_title": "Ask Home: SEO for “domotique Maroc” | Case study",
-    "seo_description": "SEO optimisation of askhome.ma: keywords, H1/H2 headings, content and visuals with AnswerThePublic, Semrush and Similarweb. Ranked 2nd on Google for “domotique maroc”."
+    "seo_description": "SEO optimisation of askhome.ma: keywords, H1/H2 headings, content and visuals with AnswerThePublic, Semrush and Similarweb. Ranked 2nd on Google for “domotique maroc”.",
+    "context": "Ask Home installs smart home solutions in Casablanca, Rabat, Marrakech and across Morocco, in a competitive market.",
+    "objectives": "- Gain visibility for “domotique maroc”.\n- Better match customers’ real searches.",
+    "methodology": "1. Keyword and question research with **AnswerThePublic** and **Semrush**.\n2. Competitor analysis with **Similarweb**.\n3. Rewrote H1 and H2 headings around “domotique” and the target cities.\n4. Optimised content and visuals.",
+    "results": "- **Ranked 2nd on Google’s first page** for “domotique maroc”\n- Headings structured around keywords: “Ask Home: leader in home automation & smart homes in Casablanca, Rabat & Marrakech”"
   }
 }

@@ -12,16 +12,19 @@
   "gallery": [
     {
       "image": "/uploads/projets/noctura/noctura-meta-ads-notoriete-resultats.jpg",
-      "caption": "Résultats : 70 574 personnes touchées, 77 014 impressions, 0,04 $ pour 1 000 personnes",
-      "caption_en": "Results: 70,574 people reached, 77,014 impressions, $0.04 per 1,000 people"
+      "caption": "70 574 personnes touchées",
+      "caption_en": "70,574 people reached"
     },
     {
       "image": "/uploads/projets/noctura/noctura-meta-ads-suivi-pixel.jpg",
-      "caption": "Suivi des événements du site web avec le pixel Meta de Noctura",
-      "caption_en": "Website event tracking with the Noctura Meta pixel"
+      "caption": "Suivi avec le pixel Meta",
+      "caption_en": "Meta pixel tracking"
     }
   ],
-  "tools": ["meta-business-suite", "shopify"],
+  "tools": [
+    "meta-business-suite",
+    "shopify"
+  ],
   "links": [
     {
       "label": "Voir l’étude de cas de la boutique Noctura",
@@ -31,34 +34,24 @@
     }
   ],
   "fr": {
-    "summary": "Campagne Meta Ads avec l’objectif Notoriété pour lancer la marque Noctura au Maroc : 70 574 personnes touchées pour 2,84 $, soit environ 0,04 $ pour 1 000 personnes.",
+    "summary": "Campagne Meta Ads de notoriété pour lancer Noctura au Maroc : 70 574 personnes touchées pour 2,84 $, soit 0,04 $ pour 1 000 personnes.",
     "cover_alt": "Résultats de la campagne Meta Ads Noctura Brand Awareness Morocco : portée, impressions et coût pour 1 000 personnes",
-    "presentation": "Après la création de la boutique Shopify **Noctura** (patch sommeil connecté), j’ai lancé une campagne **Meta Ads** avec l’objectif **Notoriété**, pour faire connaître la marque auprès du public marocain sur les plateformes Meta.",
-    "context": "Noctura est une marque nouvelle, sur un produit innovant que le public ne connaît pas encore. Avant de chercher à vendre, il faut d’abord **faire connaître la marque** au plus grand nombre de personnes possible, avec un petit budget.",
-    "problem": "Comment toucher un maximum de personnes au Maroc, à moindre coût, pour installer une marque encore inconnue ?",
-    "objectives": "- Toucher le plus grand nombre de personnes au Maroc.\n- Obtenir un coût pour 1 000 personnes touchées très bas.\n- Préparer les futures campagnes de vente grâce au suivi du pixel Meta.",
-    "methodology": "1. Création de la campagne « NOCTURA | BRAND AWARENESS | MOROCCO » avec l’objectif **Notoriété**.\n2. Ciblage du marché marocain et budget limité à 5 $.\n3. Diffusion de **3 publicités** reprenant l’univers visuel de la marque.\n4. Activation du **suivi des événements du site web** avec le pixel Meta de Noctura, relié à la boutique Shopify.\n5. Suivi des résultats : portée, impressions, coût pour 1 000 personnes et fréquence.",
-    "strategy": "Une stratégie en **entonnoir** : commencer par la notoriété pour faire découvrir la marque à une large audience, puis s’appuyer sur les données collectées par le **pixel Meta** (visites, actions sur la boutique) pour cibler ensuite les personnes déjà exposées avec des campagnes orientées vente.",
-    "work": "- Paramétrage de la campagne et de l’objectif Notoriété.\n- Diffusion de 3 publicités sur les plateformes Meta.\n- Configuration du suivi des conversions avec le pixel Meta de la boutique.\n- Analyse des résultats dans le Gestionnaire de publicités.",
-    "results": "**Résultats au moment de la capture (campagne active) :**\n\n- **70 574 personnes touchées**\n- **77 014 impressions**\n- **0,0402 $ pour 1 000 personnes touchées**\n- **2,84 $ dépensés** sur un budget de 5 $\n- **Fréquence moyenne de 1,1** sur les 3 publicités : chaque personne a vu la publicité environ une fois, sans saturation.",
-    "conclusion": "Avec moins de 3 $, la campagne a fait découvrir Noctura à plus de 70 000 personnes au Maroc. La prochaine étape est une campagne de **reciblage** orientée ventes, qui s’appuiera sur l’audience exposée et sur les données du pixel.",
     "seo_title": "Noctura : campagne Meta Ads de notoriété au Maroc | Étude de cas",
-    "seo_description": "Campagne Meta Ads Notoriété pour la marque Noctura au Maroc : 70 574 personnes touchées pour 2,84 $, soit 0,04 $ pour 1 000 personnes, avec suivi par pixel Meta."
+    "seo_description": "Campagne Meta Ads Notoriété pour la marque Noctura au Maroc : 70 574 personnes touchées pour 2,84 $, soit 0,04 $ pour 1 000 personnes, avec suivi par pixel Meta.",
+    "context": "Noctura est une marque nouvelle : avant de vendre, il fallait la faire connaître au plus grand nombre, avec un petit budget.",
+    "objectives": "- Toucher un maximum de personnes au Maroc.\n- Préparer les futures campagnes de vente.",
+    "methodology": "1. Objectif **Notoriété**, ciblage Maroc, budget de 5 $.\n2. Diffusion de **3 publicités** dans l’univers visuel de la marque.\n3. Suivi des événements du site avec le **pixel Meta** relié à la boutique Shopify, pour du reciblage ensuite.",
+    "results": "- **70 574 personnes touchées**\n- **77 014 impressions**\n- **0,04 $ pour 1 000 personnes touchées**\n- **Fréquence de 1,1** : pas de saturation\n- **2,84 $ dépensés**"
   },
   "en": {
     "title": "Noctura — Meta Ads awareness campaign",
-    "summary": "Meta Ads campaign with the Awareness objective to launch the Noctura brand in Morocco: 70,574 people reached for $2.84, i.e. about $0.04 per 1,000 people.",
+    "summary": "Meta Ads awareness campaign to launch Noctura in Morocco: 70,574 people reached for $2.84, i.e. $0.04 per 1,000 people.",
     "cover_alt": "Results of the Noctura Brand Awareness Morocco Meta Ads campaign: reach, impressions and cost per 1,000 people",
-    "presentation": "After building the **Noctura** Shopify store (connected sleep patch), I launched a **Meta Ads** campaign with the **Awareness** objective to introduce the brand to Moroccan audiences on Meta platforms.",
-    "context": "Noctura is a new brand with an innovative product people don’t know yet. Before selling, the brand first needs to **become known** by as many people as possible, on a small budget.",
-    "problem": "How to reach as many people as possible in Morocco, at the lowest cost, to establish a brand that is still unknown?",
-    "objectives": "- Reach the largest possible audience in Morocco.\n- Keep the cost per 1,000 people reached very low.\n- Prepare future sales campaigns through Meta pixel tracking.",
-    "methodology": "1. Created the “NOCTURA | BRAND AWARENESS | MOROCCO” campaign with the **Awareness** objective.\n2. Targeted the Moroccan market with a budget capped at $5.\n3. Ran **3 ads** using the brand’s visual identity.\n4. Enabled **website event tracking** with the Noctura Meta pixel, connected to the Shopify store.\n5. Tracked results: reach, impressions, cost per 1,000 people and frequency.",
-    "strategy": "A **funnel** approach: start with awareness to introduce the brand to a wide audience, then use the data collected by the **Meta pixel** (visits, store actions) to retarget people already exposed with sales-focused campaigns.",
-    "work": "- Set up the campaign and the Awareness objective.\n- Ran 3 ads on Meta platforms.\n- Configured conversion tracking with the store’s Meta pixel.\n- Analysed results in Ads Manager.",
-    "results": "**Results at the time of the screenshot (campaign active):**\n\n- **70,574 people reached**\n- **77,014 impressions**\n- **$0.0402 per 1,000 people reached**\n- **$2.84 spent** out of a $5 budget\n- **Average frequency of 1.1** across the 3 ads: each person saw the ad about once, with no ad fatigue.",
-    "conclusion": "For under $3, the campaign introduced Noctura to more than 70,000 people in Morocco. The next step is a sales-focused **retargeting** campaign built on the exposed audience and pixel data.",
     "seo_title": "Noctura: Meta Ads awareness campaign in Morocco | Case study",
-    "seo_description": "Meta Ads Awareness campaign for the Noctura brand in Morocco: 70,574 people reached for $2.84, i.e. $0.04 per 1,000 people, with Meta pixel tracking."
+    "seo_description": "Meta Ads Awareness campaign for the Noctura brand in Morocco: 70,574 people reached for $2.84, i.e. $0.04 per 1,000 people, with Meta pixel tracking.",
+    "context": "Noctura is a new brand: before selling, it had to become known to as many people as possible, on a small budget.",
+    "objectives": "- Reach as many people as possible in Morocco.\n- Prepare future sales campaigns.",
+    "methodology": "1. **Awareness** objective, Morocco targeting, $5 budget.\n2. Ran **3 ads** in the brand’s visual style.\n3. Website event tracking with the **Meta pixel** connected to the Shopify store, for later retargeting.",
+    "results": "- **70,574 people reached**\n- **77,014 impressions**\n- **$0.04 per 1,000 people reached**\n- **Frequency of 1.1**: no ad fatigue\n- **$2.84 spent**"
   }
 }

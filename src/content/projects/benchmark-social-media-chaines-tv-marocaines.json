@@ -12,28 +12,28 @@
   "gallery": [
     {
       "image": "/uploads/projets/benchmark-audiovisuel/benchmark-tableau-benchmark-reseaux-sociaux.jpg",
-      "caption": "Tableau de benchmark : abonnés par plateforme et niveau d’engagement des 5 chaînes",
-      "caption_en": "Benchmark table: followers per platform and engagement level for the 5 channels"
+      "caption": "Tableau de benchmark des 5 chaînes",
+      "caption_en": "Benchmark table of the 5 channels"
     },
     {
       "image": "/uploads/projets/benchmark-audiovisuel/benchmark-presence-digitale-chaines-marocaines.jpg",
-      "caption": "Présence digitale des chaînes : plateformes, communauté, contenus et activité",
-      "caption_en": "Channels’ digital presence: platforms, community, content and activity"
+      "caption": "Présence digitale des chaînes",
+      "caption_en": "Channels’ digital presence"
     },
     {
       "image": "/uploads/projets/benchmark-audiovisuel/benchmark-analyse-strategie-social-media-2m.jpg",
-      "caption": "Analyse de stratégie social media : positionnement, contenu et usage des plateformes",
-      "caption_en": "Social media strategy analysis: positioning, content and platform use"
+      "caption": "Analyse de stratégie social media",
+      "caption_en": "Social media strategy analysis"
     },
     {
       "image": "/uploads/projets/benchmark-audiovisuel/benchmark-kpis-reseaux-sociaux-2m.jpg",
-      "caption": "Analyse des KPIs par plateforme (Instagram, TikTok, Facebook, YouTube)",
-      "caption_en": "KPI analysis per platform (Instagram, TikTok, Facebook, YouTube)"
+      "caption": "KPIs par plateforme",
+      "caption_en": "KPIs per platform"
     },
     {
       "image": "/uploads/projets/benchmark-audiovisuel/benchmark-donnees-social-blade-al-aoula.jpg",
-      "caption": "Données Social Blade : évolution des abonnés et des vues",
-      "caption_en": "Social Blade data: follower and view trends"
+      "caption": "Données Social Blade",
+      "caption_en": "Social Blade data"
     },
     {
       "image": "/uploads/projets/benchmark-audiovisuel/benchmark-recommandations-strategiques.jpg",
@@ -41,35 +41,30 @@
       "caption_en": "Strategic recommendations"
     }
   ],
-  "tools": ["social-blade", "canva"],
+  "tools": [
+    "social-blade",
+    "canva"
+  ],
   "links": [],
   "fr": {
-    "summary": "Audit et benchmark de la présence sur les réseaux sociaux de 5 chaînes de télévision marocaines (2M, Al Aoula, Medi1TV, Chada TV, Télé Maroc) sur Facebook, Instagram, YouTube et TikTok, avec Social Blade, puis recommandations stratégiques.",
+    "summary": "Audit et benchmark des réseaux sociaux de 5 chaînes TV marocaines (2M, Al Aoula, Medi1TV, Chada TV, Télé Maroc) sur Facebook, Instagram, YouTube et TikTok, avec recommandations stratégiques.",
     "cover_alt": "Tableau comparatif des abonnés Facebook, Instagram, YouTube et TikTok de 2M, Al Aoula, Medi1TV, Chada TV et Télé Maroc",
-    "presentation": "Projet de **benchmark social media** du secteur audiovisuel marocain, réalisé en équipe. Nous avons comparé la présence digitale de cinq chaînes de télévision (**2M, Al Aoula, Medi1TV, Chada TV et Télé Maroc**) sur Facebook, Instagram, YouTube et TikTok, puis formulé des recommandations.",
-    "context": "La télévision traditionnelle est de plus en plus concurrencée par les réseaux sociaux et les plateformes digitales, et le smartphone devient le principal écran de consommation des contenus. Les chaînes marocaines doivent donc adapter leur stratégie pour capter et engager leur audience en ligne.",
-    "problem": "Les chaînes marocaines ont une forte visibilité sur les réseaux sociaux, mais **leur stratégie est-elle adaptée aux codes de chaque plateforme**, et leur audience est-elle réellement engagée ?",
-    "objectives": "- Analyser la présence digitale des chaînes.\n- Comparer leurs performances.\n- Identifier les meilleures pratiques.\n- Proposer des recommandations stratégiques.",
-    "analysis": "Pour chaque chaîne, l’analyse a porté sur :\n\n- **La présence digitale** : plateformes utilisées, taille de la communauté, types de contenus, niveau d’activité.\n- **La stratégie social media** : positionnement, stratégie de contenu, rôle de chaque plateforme, position sur le marché.\n- **Les performances (KPIs)** : abonnés, volume de publications, vues, engagement et croissance, en partie à partir des données **Social Blade**.\n- **Le contenu** : types de contenus, formats utilisés, objectifs et performance.",
-    "methodology": "1. Relevé de la présence de chaque chaîne sur Facebook, Instagram, YouTube et TikTok.\n2. Analyse qualitative des stratégies et des contenus publiés.\n3. Collecte des indicateurs sur chaque compte et avec Social Blade (abonnés, vues, croissance).\n4. Synthèse dans un tableau de benchmark comparatif.\n5. Formulation de recommandations stratégiques.",
-    "results": "**Tableau de benchmark (abonnés par plateforme) :**\n\n| Chaîne | Facebook | Instagram | YouTube | TikTok | Engagement global |\n|---|---|---|---|---|---|\n| 2M | 11M | 4,3M | 10,4M | 1,6M | Élevé sur les contenus viraux, faible taux par post (0,01 % sur Instagram) |\n| Al Aoula | 6,2M | 2M | 3,38M | 972K | Modéré, avec des pics pendant le Ramadan et Lalla Laaroussa |\n| Medi1TV | 9,1M | 1,6M | 3,81M | 246,9K | Très faible (0,01 % sur Instagram), stratégie de volume massif |\n| Chada TV | 2,7M | 512K | 1,25M | 61,6K | Très limité, freiné par une inactivité récente |\n| Télé Maroc | 3,9M | 356K | 2,8M | 49,4K | Variable, plus agile sur le contenu « buzz » et les talk-shows |\n\n**Principaux constats :**\n\n- Les chaînes ont une **forte visibilité mais un engagement limité**.\n- Beaucoup de contenus sont des **extraits TV longs recyclés**, peu adaptés aux codes de TikTok et des Reels, ce qui réduit leur portée.\n- Les contenus courts et populaires (programmes du Ramadan, extraits viraux) génèrent le plus de vues.\n- 2M étend son écosystème avec des **comptes satellites** pour toucher des audiences très différentes (institutionnelle d’un côté, jeune et sportive de l’autre).",
-    "conclusion": "**Recommandations proposées :**\n\n- **Développer les formats courts** : plus de Reels et de TikTok pour attirer les jeunes audiences.\n- **Renforcer l’interaction** avec la communauté : répondre aux commentaires, poser des questions, créer des sondages.\n- **Collaborer avec des influenceurs** pour élargir l’audience et améliorer l’engagement.\n- **Piloter par les données (KPIs)** : analyser les performances et adapter les contenus à ce qui fonctionne.\n\nLe secteur audiovisuel marocain est en pleine transition digitale : l’enjeu est de miser sur l’innovation et l’interaction pour rester compétitif face aux nouvelles plateformes.",
     "seo_title": "Benchmark social media des chaînes TV marocaines | Étude de cas",
-    "seo_description": "Benchmark des réseaux sociaux de 2M, Al Aoula, Medi1TV, Chada TV et Télé Maroc (Facebook, Instagram, YouTube, TikTok) avec Social Blade, et recommandations."
+    "seo_description": "Benchmark des réseaux sociaux de 2M, Al Aoula, Medi1TV, Chada TV et Télé Maroc (Facebook, Instagram, YouTube, TikTok) avec Social Blade, et recommandations.",
+    "context": "Face à la montée des réseaux sociaux, les chaînes marocaines doivent adapter leur stratégie pour capter une audience qui consomme d’abord sur smartphone.",
+    "objectives": "- Comparer la présence et les performances des chaînes.\n- Identifier les meilleures pratiques.\n- Proposer des recommandations.",
+    "methodology": "1. Analyse de la présence, du positionnement et des contenus de chaque chaîne.\n2. Collecte des KPIs (abonnés, vues, croissance) sur les comptes et avec **Social Blade**.\n3. Synthèse dans un tableau de benchmark.\n4. Recommandations stratégiques.",
+    "results": "| Chaîne | Facebook | Instagram | YouTube | TikTok |\n|---|---|---|---|---|\n| 2M | 11M | 4,3M | 10,4M | 1,6M |\n| Al Aoula | 6,2M | 2M | 3,38M | 972K |\n| Medi1TV | 9,1M | 1,6M | 3,81M | 246,9K |\n| Chada TV | 2,7M | 512K | 1,25M | 61,6K |\n| Télé Maroc | 3,9M | 356K | 2,8M | 49,4K |\n\n**Recommandations :** développer les formats courts (Reels, TikTok), renforcer l’interaction avec la communauté, collaborer avec des influenceurs et piloter les contenus par les KPIs."
   },
   "en": {
     "title": "Social media benchmark of Moroccan TV channels",
-    "summary": "Audit and benchmark of the social media presence of 5 Moroccan TV channels (2M, Al Aoula, Medi1TV, Chada TV, Télé Maroc) on Facebook, Instagram, YouTube and TikTok, using Social Blade, followed by strategic recommendations.",
+    "summary": "Audit and benchmark of the social media of 5 Moroccan TV channels (2M, Al Aoula, Medi1TV, Chada TV, Télé Maroc) on Facebook, Instagram, YouTube and TikTok, with strategic recommendations.",
     "cover_alt": "Comparison table of Facebook, Instagram, YouTube and TikTok followers for 2M, Al Aoula, Medi1TV, Chada TV and Télé Maroc",
-    "presentation": "A **social media benchmark** of the Moroccan broadcasting sector, carried out as a team. We compared the digital presence of five TV channels (**2M, Al Aoula, Medi1TV, Chada TV and Télé Maroc**) on Facebook, Instagram, YouTube and TikTok, then made recommendations.",
-    "context": "Traditional TV increasingly competes with social networks and digital platforms, and the smartphone is becoming the main screen for content. Moroccan channels therefore need to adapt their strategy to capture and engage their audience online.",
-    "problem": "Moroccan channels have strong visibility on social media, but **is their strategy adapted to each platform’s codes**, and is their audience truly engaged?",
-    "objectives": "- Analyse the channels’ digital presence.\n- Compare their performance.\n- Identify best practices.\n- Make strategic recommendations.",
-    "analysis": "For each channel, the analysis covered:\n\n- **Digital presence**: platforms used, community size, content types, activity level.\n- **Social media strategy**: positioning, content strategy, role of each platform, market position.\n- **Performance (KPIs)**: followers, posting volume, views, engagement and growth, partly from **Social Blade** data.\n- **Content**: content types, formats, goals and performance.",
-    "methodology": "1. Mapped each channel’s presence on Facebook, Instagram, YouTube and TikTok.\n2. Qualitative analysis of strategies and published content.\n3. Collected metrics from each account and from Social Blade (followers, views, growth).\n4. Summarised findings in a comparative benchmark table.\n5. Formulated strategic recommendations.",
-    "results": "**Benchmark table (followers per platform):**\n\n| Channel | Facebook | Instagram | YouTube | TikTok | Overall engagement |\n|---|---|---|---|---|---|\n| 2M | 11M | 4.3M | 10.4M | 1.6M | High on viral content, low rate per post (0.01% on Instagram) |\n| Al Aoula | 6.2M | 2M | 3.38M | 972K | Moderate, with peaks during Ramadan and Lalla Laaroussa |\n| Medi1TV | 9.1M | 1.6M | 3.81M | 246.9K | Very low (0.01% on Instagram), high-volume strategy |\n| Chada TV | 2.7M | 512K | 1.25M | 61.6K | Very limited, held back by recent inactivity |\n| Télé Maroc | 3.9M | 356K | 2.8M | 49.4K | Variable, more agile with “buzz” content and talk shows |\n\n**Key findings:**\n\n- Channels have **strong visibility but limited engagement**.\n- Much content is **long, recycled TV clips**, poorly suited to TikTok and Reels, which reduces reach.\n- Short, popular content (Ramadan programmes, viral clips) drives the most views.\n- 2M extends its ecosystem with **satellite accounts** to reach very different audiences (institutional on one side, young and sports-oriented on the other).",
-    "conclusion": "**Recommendations:**\n\n- **Develop short formats**: more Reels and TikTok to attract younger audiences.\n- **Strengthen interaction** with the community: reply to comments, ask questions, run polls.\n- **Collaborate with influencers** to broaden reach and improve engagement.\n- **Steer with data (KPIs)**: analyse performance and adapt content to what works.\n\nThe Moroccan broadcasting sector is in the middle of its digital transition: the challenge is to invest in innovation and interaction to stay competitive against new platforms.",
     "seo_title": "Social media benchmark of Moroccan TV channels | Case study",
-    "seo_description": "Social media benchmark of 2M, Al Aoula, Medi1TV, Chada TV and Télé Maroc (Facebook, Instagram, YouTube, TikTok) using Social Blade, with recommendations."
+    "seo_description": "Social media benchmark of 2M, Al Aoula, Medi1TV, Chada TV and Télé Maroc (Facebook, Instagram, YouTube, TikTok) using Social Blade, with recommendations.",
+    "context": "As social media grows, Moroccan channels must adapt their strategy to reach an audience that now watches mainly on smartphones.",
+    "objectives": "- Compare the channels’ presence and performance.\n- Identify best practices.\n- Make recommendations.",
+    "methodology": "1. Analysed each channel’s presence, positioning and content.\n2. Collected KPIs (followers, views, growth) from the accounts and **Social Blade**.\n3. Summarised findings in a benchmark table.\n4. Strategic recommendations.",
+    "results": "| Channel | Facebook | Instagram | YouTube | TikTok |\n|---|---|---|---|---|\n| 2M | 11M | 4.3M | 10.4M | 1.6M |\n| Al Aoula | 6.2M | 2M | 3.38M | 972K |\n| Medi1TV | 9.1M | 1.6M | 3.81M | 246.9K |\n| Chada TV | 2.7M | 512K | 1.25M | 61.6K |\n| Télé Maroc | 3.9M | 356K | 2.8M | 49.4K |\n\n**Recommendations:** develop short formats (Reels, TikTok), strengthen community interaction, work with influencers and steer content with KPIs."
   }
 }

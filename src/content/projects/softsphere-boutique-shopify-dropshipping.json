@@ -12,23 +12,23 @@
   "gallery": [
     {
       "image": "/uploads/projets/softsphere/softsphere-accueil-peignoirs-famille.jpg",
-      "caption": "Page d’accueil : bannière par cible (hommes, femmes, enfants) et arguments de réassurance",
-      "caption_en": "Home page: banner by audience (men, women, kids) and trust points"
+      "caption": "Page d’accueil SoftSphere",
+      "caption_en": "SoftSphere home page"
     },
     {
       "image": "/uploads/projets/softsphere/softsphere-collection-peignoirs-homme-promotions.jpg",
-      "caption": "Collection « Peignoirs Homme » avec prix barrés et badges Promotion",
-      "caption_en": "“Men’s bathrobes” collection with compare-at prices and Sale badges"
+      "caption": "Collection Peignoirs Homme",
+      "caption_en": "Men’s bathrobes collection"
     },
     {
       "image": "/uploads/projets/softsphere/softsphere-packs-speciaux.jpg",
-      "caption": "Section « Packs Spéciaux » pour augmenter le panier moyen",
-      "caption_en": "“Special packs” section to increase average order value"
+      "caption": "Packs Spéciaux",
+      "caption_en": "Special bundles"
     },
     {
       "image": "/uploads/projets/softsphere/softsphere-shopify-theme-trade-web-vitals.jpg",
-      "caption": "Back-office Shopify : thème Trade et indicateurs Web Vitals sur 30 jours",
-      "caption_en": "Shopify admin: Trade theme and 30-day Web Vitals"
+      "caption": "Thème Shopify Trade",
+      "caption_en": "Shopify Trade theme"
     }
   ],
   "tools": [
@@ -43,34 +43,24 @@
     }
   ],
   "fr": {
-    "summary": "Création de SoftSphere, une boutique Shopify de peignoirs et vêtements de détente pour toute la famille, alimentée par une application de dropshipping et pensée pour le marché marocain.",
+    "summary": "Création de SoftSphere, une boutique Shopify de peignoirs pour toute la famille, alimentée par une application de dropshipping et pensée pour le marché marocain.",
     "cover_alt": "Page d’accueil de la boutique SoftSphere : « Des peignoirs et vêtements de détente pour toute la famille »",
-    "presentation": "SoftSphere est une boutique en ligne de **peignoirs et de vêtements de détente pour hommes, femmes et enfants**. J’ai créé la boutique sur Shopify et je l’ai alimentée en produits grâce à une **application de dropshipping**, qui permet de vendre sans gérer de stock.",
-    "context": "La boutique vise le marché marocain : prix en dirhams et livraison gratuite dès 600 DH d’achat. Le modèle du dropshipping permet de lancer une offre complète sans investir dans un stock.",
-    "problem": "En dropshipping, les produits sont souvent proposés par de nombreuses boutiques. Le défi est de **se différencier** et de **donner confiance** : une marque cohérente, un catalogue clair et des offres qui donnent envie d’acheter.",
-    "objectives": "- Créer une boutique Shopify à l’image d’une vraie marque (nom, logo, univers visuel).\n- Importer et organiser les produits via l’application de dropshipping.\n- Rendre la navigation simple par type de client (hommes, femmes, enfants).\n- Encourager l’achat avec des promotions et des packs.",
-    "methodology": "1. Choix et personnalisation du thème Shopify **Trade**.\n2. Création de l’identité de la boutique : nom, logo et ambiance « cocooning » en couleurs douces.\n3. Import des produits via l’application de dropshipping, puis organisation en collections.\n4. Mise en place des leviers de conversion : promotions, packs, livraison gratuite et réassurance.",
-    "strategy": "Positionner la marque sur le **confort pour toute la famille**, avec une page d’accueil qui oriente immédiatement vers trois cibles : hommes, femmes et enfants. Pour augmenter le panier moyen : des **packs** (Duo Cocooning, Découverte Essential, Prestige, Famille Douceur) et un **seuil de livraison gratuite** à 600 DH.",
-    "work": "- Personnalisation du thème Trade : en-tête, menu (Accueil, Catalogue, Contact, Offres Spéciales), bannière d’annonce.\n- Bannière d’accueil par cible, avec quatre arguments de réassurance : tissus doux, qualité supérieure, confort au quotidien, pour toute la famille.\n- Import des produits via l’application de dropshipping et création des collections (dont « Peignoirs Homme »).\n- Prix barrés et badges « Promotion » sur les produits.\n- Création de la section « Packs Spéciaux ».",
-    "results": "**Livrable :** une boutique Shopify opérationnelle, avec catalogue, promotions et packs.\n\n**Performance mesurée par Shopify (Web Vitals, 30 jours, 75e percentile) :**\n\n- INP (réactivité) : **24 ms**, jugé « Bon ».\n- CLS (stabilité visuelle) : **0**.\n- LCP (affichage du contenu principal) : **2 508 ms**, jugé « Modéré ». C’est le principal axe d’amélioration (poids des images de la bannière).",
-    "conclusion": "Ce projet m’a permis de maîtriser la chaîne complète d’une boutique en dropshipping : création de la marque, import des produits, mise en avant de l’offre et suivi des performances. Prochaine étape : optimiser les images pour passer le LCP sous 2,5 secondes.",
     "seo_title": "SoftSphere : boutique Shopify en dropshipping | Étude de cas",
-    "seo_description": "Création de la boutique Shopify SoftSphere (peignoirs pour toute la famille, Maroc) avec une application de dropshipping : thème, catalogue, promotions et packs."
+    "seo_description": "Création de la boutique Shopify SoftSphere (peignoirs pour toute la famille, Maroc) avec une application de dropshipping : thème, catalogue, promotions et packs.",
+    "context": "Lancer une marque de peignoirs et de vêtements de détente sans gérer de stock, grâce au dropshipping, avec une image de marque cohérente.",
+    "objectives": "- Créer une boutique à l’image d’une vraie marque.\n- Organiser le catalogue par cible : hommes, femmes, enfants.\n- Encourager l’achat avec des offres claires.",
+    "methodology": "1. Personnalisation du thème Shopify **Trade** et création de l’identité de la marque.\n2. Import des produits via une **application de dropshipping** et création des collections.\n3. Mise en place des leviers de conversion : promotions, packs, livraison gratuite dès 600 DH.",
+    "results": "- Boutique opérationnelle avec catalogue, promotions et **4 packs** (Duo Cocooning, Découverte Essential, Prestige, Famille Douceur)\n- **Réactivité INP : 24 ms** (« Bon ») et **stabilité visuelle CLS : 0**, selon Shopify"
   },
   "en": {
     "title": "SoftSphere — Shopify dropshipping store",
-    "summary": "Building SoftSphere, a Shopify store selling bathrobes and loungewear for the whole family, powered by a dropshipping app and designed for the Moroccan market.",
+    "summary": "Built SoftSphere, a Shopify store selling bathrobes for the whole family, powered by a dropshipping app and designed for the Moroccan market.",
     "cover_alt": "SoftSphere store home page: “Bathrobes and loungewear for the whole family”",
-    "presentation": "SoftSphere is an online store selling **bathrobes and loungewear for men, women and children**. I built the store on Shopify and stocked it with products through a **dropshipping app**, which makes it possible to sell without managing inventory.",
-    "context": "The store targets the Moroccan market: prices in dirhams and free delivery on orders over 600 DH. The dropshipping model makes it possible to launch a full catalogue without investing in stock.",
-    "problem": "In dropshipping, the same products are often sold by many stores. The challenge is to **stand out** and **build trust**: a consistent brand, a clear catalogue and offers that make people want to buy.",
-    "objectives": "- Build a Shopify store that looks like a real brand (name, logo, visual identity).\n- Import and organise products through the dropshipping app.\n- Make browsing easy by customer type (men, women, kids).\n- Encourage purchases with promotions and bundles.",
-    "methodology": "1. Choosing and customising the Shopify **Trade** theme.\n2. Creating the store identity: name, logo and a soft, “cocooning” look.\n3. Importing products through the dropshipping app, then organising them into collections.\n4. Setting up conversion levers: promotions, bundles, free delivery and trust points.",
-    "strategy": "Position the brand on **comfort for the whole family**, with a home page that immediately points to three audiences: men, women and kids. To grow average order value: **bundles** (Duo Cocooning, Découverte Essential, Prestige, Famille Douceur) and a **free delivery threshold** at 600 DH.",
-    "work": "- Customised the Trade theme: header, menu (Home, Catalogue, Contact, Special Offers), announcement bar.\n- Home banner by audience, with four trust points: soft fabrics, superior quality, everyday comfort, for the whole family.\n- Imported products through the dropshipping app and created collections (including “Men’s bathrobes”).\n- Compare-at prices and “Sale” badges on products.\n- Built the “Special packs” section.",
-    "results": "**Deliverable:** a working Shopify store with catalogue, promotions and bundles.\n\n**Performance measured by Shopify (Web Vitals, 30 days, 75th percentile):**\n\n- INP (responsiveness): **24 ms**, rated “Good”.\n- CLS (visual stability): **0**.\n- LCP (main content load): **2,508 ms**, rated “Moderate”. This is the main area to improve (banner image weight).",
-    "conclusion": "This project taught me the full chain of a dropshipping store: building the brand, importing products, showcasing the offer and tracking performance. Next step: optimise images to bring LCP under 2.5 seconds.",
     "seo_title": "SoftSphere: Shopify dropshipping store | Case study",
-    "seo_description": "Building the SoftSphere Shopify store (bathrobes for the whole family, Morocco) with a dropshipping app: theme, catalogue, promotions and bundles."
+    "seo_description": "Building the SoftSphere Shopify store (bathrobes for the whole family, Morocco) with a dropshipping app: theme, catalogue, promotions and bundles.",
+    "context": "Launch a bathrobe and loungewear brand without managing stock, using dropshipping, with a consistent brand image.",
+    "objectives": "- Build a store that looks like a real brand.\n- Organise the catalogue by audience: men, women, kids.\n- Encourage purchases with clear offers.",
+    "methodology": "1. Customised the Shopify **Trade** theme and created the brand identity.\n2. Imported products through a **dropshipping app** and built collections.\n3. Set up conversion levers: promotions, bundles, free delivery from 600 DH.",
+    "results": "- Working store with catalogue, promotions and **4 bundles** (Duo Cocooning, Découverte Essential, Prestige, Famille Douceur)\n- **INP responsiveness: 24 ms** (“Good”) and **CLS visual stability: 0**, per Shopify"
   }
 }
