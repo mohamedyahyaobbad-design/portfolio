@@ -1,12 +1,15 @@
 # ==========================================================
 # Administration du portfolio (Decap CMS)
 # Chaque enregistrement crée une mise à jour sur GitHub,
-# puis Netlify republie automatiquement le site (1 à 2 min).
+# puis Cloudflare Pages republie automatiquement le site (1 à 2 min).
 # ==========================================================
 backend:
   name: github
   repo: mohamedyahyaobbad-design/portfolio
   branch: main
+  # Connexion GitHub via le fournisseur OAuth installé sur le projet Netlify
+  base_url: https://api.netlify.com
+  site_domain: mohamed-yahya-obbad.netlify.app
   commit_messages:
     create: "Ajout : {{collection}} « {{slug}} »"
     update: "Mise à jour : {{collection}} « {{slug}} »"
@@ -18,8 +21,8 @@ backend:
 # puis mises en ligne en une seule publication depuis l'onglet « Flux éditorial ».
 publish_mode: editorial_workflow
 show_preview_links: true
-site_url: https://mohamed-yahya-obbad.netlify.app
-display_url: https://mohamed-yahya-obbad.netlify.app
+site_url: https://mohamed-yahya-obbad.pages.dev
+display_url: https://mohamed-yahya-obbad.pages.dev
 
 locale: fr
 logo_url: /favicon.svg
@@ -332,6 +335,7 @@ collections:
           - { label: "Email", name: email, widget: string, required: false }
           - { label: "Téléphone", name: phone, widget: string, required: false }
           - { label: "Profil LinkedIn (URL complète)", name: linkedin, widget: string, required: false }
+          - { label: "Clé Web3Forms (formulaire de contact)", name: form_key, widget: string, required: false, hint: "Clé d’accès créée sur web3forms.com : les messages du formulaire arrivent sur l’email associé." }
           - label: "Autres réseaux"
             name: socials
             widget: list

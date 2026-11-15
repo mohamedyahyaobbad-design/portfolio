@@ -1,8 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Netlify fournit automatiquement l'URL du site (variable URL) pendant le build.
-const site = process.env.URL || 'https://mohamed-yahya-obbad.netlify.app';
+// Adresse publique du site (Cloudflare Pages). Peut être remplacée par la variable SITE_URL.
+const site = process.env.SITE_URL || 'https://mohamed-yahya-obbad.pages.dev';
 
 export default defineConfig({
   site,

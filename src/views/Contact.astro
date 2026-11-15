@@ -47,10 +47,12 @@ const title = lang === 'fr' ? 'Contact' : 'Contact';
 
       <div class="card form-card">
         <h2>{F.title}</h2>
-        <form name="contact" method="POST" action={routes.thanks[lang]} data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact" />
+        <form name="contact" method="POST" action="https://api.web3forms.com/submit" data-contact-form data-thanks={routes.thanks[lang]} data-error={F.error}>
+          <input type="hidden" name="access_key" value={contact.form_key || ''} />
+          <input type="hidden" name="subject" value="Nouveau message portfolio (stage / freelance)" />
+          <input type="hidden" name="from_name" value="Portfolio Mohamed Yahya Obbad" />
           <input type="hidden" name="langue" value={lang} />
-          <p class="hp"><label>Ne pas remplir / Do not fill: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <fieldset class="field">
             <legend>{F.requestType}</legend>
@@ -61,12 +63,13 @@ const title = lang === 'fr' ? 'Contact' : 'Contact';
           </fieldset>
 
           <div class="field-row">
-            <div class="field"><label for="f-name">{F.name}</label><input id="f-name" name="nom" type="text" autocomplete="name" required /></div>
+            <div class="field"><label for="f-name">{F.name}</label><input id="f-name" name="name" type="text" autocomplete="name" required /></div>
             <div class="field"><label for="f-email">{F.email}</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
           </div>
           <div class="field"><label for="f-company">{F.company}</label><input id="f-company" name="entreprise" type="text" autocomplete="organization" /></div>
           <div class="field"><label for="f-message">{F.message}</label><textarea id="f-message" name="message" required></textarea></div>
-          <button class="btn btn--primary" type="submit">{F.send} <Icon name="arrow" /></button>
+          <button class="btn btn--primary" type="submit" data-submit>{F.send} <Icon name="arrow" /></button>
+          <p class="form-status" role="status" aria-live="polite" data-status></p>
         </form>
       </div>
     </div>
@@ -77,4 +80,22 @@ const title = lang === 'fr' ? 'Contact' : 'Contact';
   // Présélection du type de demande via ?type=freelance ou ?type=recrutement
   const t = new URLSearchParams(location.search).get('type');
   if (t) document.querySelector<HTMLInputElement>(`input[data-type="${CSS.escape(t)}"]`)?.click();
+
+  // Envoi du formulaire (Web3Forms) puis redirection vers la page de remerciement
+  const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector<HTMLButtonElement>('[data-submit]');
+    const status = form.querySelector<HTMLElement>('[data-status]');
+    if (btn) btn.disabled = true;
+    try {
+      const res = await fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || json.success === false) throw new Error(json.message || 'error');
+      location.href = form.dataset.thanks || '/';
+    } catch {
+      if (status) status.textContent = form.dataset.error || '';
+      if (btn) btn.disabled = false;
+    }
+  });
 </script>

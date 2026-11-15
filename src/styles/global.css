@@ -340,6 +340,8 @@ fieldset.field { border: 0; padding: 0; margin: 0 0 1.25rem; }
 .choice small { display: block; font-weight: 400; color: var(--muted); font-size: 0.82rem; margin-top: 0.15rem; }
 .choice input:checked + span { border-color: var(--accent); background: var(--accent-soft); box-shadow: 0 0 0 3px rgb(29 78 216 / 0.1); }
 .choice input:focus-visible + span { outline: 3px solid color-mix(in srgb, var(--accent) 55%, white); outline-offset: 2px; }
+.form-status { margin: 0.9rem 0 0; color: #b91c1c; font-size: 0.92rem; }
+.form-status:empty { display: none; }
 .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .field-row, .choice-grid { grid-template-columns: 1fr; } }

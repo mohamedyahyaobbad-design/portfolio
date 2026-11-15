@@ -5,16 +5,12 @@ marked.setOptions({ gfm: true, breaks: true });
 /** Convertit le texte Markdown saisi dans l'admin en HTML. */
 export const md = (s?: string | null) => (s && s.trim() ? (marked.parse(s, { async: false }) as string) : '');
 
-const optimizable = (src: string) => src.startsWith('/') && !/\.(svg|gif)$/i.test(src);
+/** Les images sont servies telles quelles (compressées à l'import) par le CDN de l'hébergeur. */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const img = (src?: string | null, _w = 1200) => src || '';
 
-/** Image redimensionnée et compressée par le CDN d'images de Netlify (WebP/AVIF automatique). */
-export const img = (src?: string | null, w = 1200) => {
-  if (!src) return '';
-  return optimizable(src) ? `/.netlify/images?url=${encodeURIComponent(src)}&w=${w}&q=78` : src;
-};
-
-export const srcset = (src?: string | null, widths = [480, 800, 1200, 1600]) =>
-  src && optimizable(src) ? widths.map((w) => `${img(src, w)} ${w}w`).join(', ') : undefined;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const srcset = (_src?: string | null, _widths?: number[]): string | undefined => undefined;
 
 export const initials = (name: string) =>
   name
