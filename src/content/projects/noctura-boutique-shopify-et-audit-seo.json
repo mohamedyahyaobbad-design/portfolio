@@ -1,5 +1,5 @@
 {
-  "title": "Noctura — Boutique Shopify et audit SEO",
+  "title": "Noctura — Boutique Shopify, SEO et GEO",
   "published": true,
   "featured": true,
   "order": 1,
@@ -19,6 +19,11 @@
       "image": "/uploads/projets/noctura/noctura-pagespeed-insights-bureau.jpg",
       "caption": "PageSpeed Insights : 99 en performances, 100 en SEO",
       "caption_en": "PageSpeed Insights: 99 performance, 100 SEO"
+    },
+    {
+      "image": "/uploads/projets/noctura/noctura-geo-recommandation-gemini.jpg",
+      "caption": "GEO : Noctura recommandée par Gemini",
+      "caption_en": "GEO: Noctura recommended by Gemini"
     },
     {
       "image": "/uploads/projets/noctura/noctura-resultat-google-patch-sommeil-maroc.jpg",
@@ -57,24 +62,24 @@
     }
   ],
   "fr": {
-    "summary": "Création de la boutique Shopify de Noctura, patch sommeil connecté vendu au Maroc, et optimisation SEO : 1re position Google sur sa requête cible et un score SEO de 100/100.",
+    "summary": "Création de la boutique Shopify de Noctura, patch sommeil connecté vendu au Maroc, optimisation SEO et GEO : 1re position Google sur sa requête cible, score SEO de 100/100, et marque recommandée par l’IA Gemini.",
     "cover_alt": "Page d’accueil de la boutique Shopify Noctura : « Le patch sommeil connecté, pour des nuits en équilibre »",
-    "seo_title": "Noctura : boutique Shopify et audit SEO | Étude de cas",
-    "seo_description": "Création de la boutique Shopify Noctura (patch sommeil connecté, Maroc) et audit SEO : PageSpeed 99/100, SEO 100/100, analyse Screaming Frog et Wappalyzer.",
+    "seo_title": "Noctura : boutique Shopify, SEO et GEO | Étude de cas",
+    "seo_description": "Boutique Shopify Noctura (patch sommeil connecté, Maroc) : 1re position Google, recommandée par Gemini (GEO), PageSpeed 99/100 et SEO 100/100.",
     "context": "Noctura lance un produit innovant au Maroc : un patch sommeil aux huiles essentielles connecté à une application. Il fallait une boutique qui inspire confiance et qui soit visible sur Google.",
-    "objectives": "- Créer une boutique Shopify claire et orientée conversion.\n- Positionner la marque sur « patch sommeil connecté Maroc ».\n- Garantir une base technique performante.",
-    "methodology": "1. Construction de la boutique et de ses pages sur Shopify.\n2. Optimisation de la balise Title et de la meta description de l’accueil.\n3. Audit technique et SEO avec PageSpeed Insights, Screaming Frog et Wappalyzer.\n4. Mise en place des outils de suivi : GA4, Google Tag Manager, Pixel Meta.",
-    "results": "- **1re position Google** sur « patch de sommeil connecté maroc »\n- **SEO : 100/100** · **Performances : 99/100** (PageSpeed, bureau)\n- **Accessibilité : 97/100** · **Bonnes pratiques : 96/100**"
+    "objectives": "- Créer une boutique Shopify claire et orientée conversion.\n- Positionner la marque sur « patch sommeil connecté Maroc ».\n- Garantir une base technique performante.\n- Être recommandé par les assistants IA (GEO).",
+    "methodology": "1. Construction de la boutique et de ses pages sur Shopify.\n2. Optimisation de la balise Title et de la meta description de l’accueil.\n3. Audit technique et SEO avec PageSpeed Insights, Screaming Frog et Wappalyzer.\n4. Optimisation **GEO** (Generative Engine Optimization) pour que la marque soit comprise et citée par les IA génératives.\n5. Mise en place des outils de suivi : GA4, Google Tag Manager, Pixel Meta.",
+    "results": "- **1re position Google** sur « patch de sommeil connecté maroc »\n- **Recommandé par Gemini** : à la question « Je cherche un patch de sommeil connecté », l’IA cite Noctura comme l’une des options les plus adaptées au Maroc, avec son prix et le paiement à la livraison\n- **SEO : 100/100** · **Performances : 99/100** (PageSpeed, bureau)\n- **Accessibilité : 97/100** · **Bonnes pratiques : 96/100**"
   },
   "en": {
-    "title": "Noctura — Shopify store & SEO audit",
-    "summary": "Built the Shopify store for Noctura, a connected sleep patch sold in Morocco, and optimised its SEO: #1 on Google for its target query and an SEO score of 100/100.",
+    "title": "Noctura — Shopify store, SEO & GEO",
+    "summary": "Built the Shopify store for Noctura, a connected sleep patch sold in Morocco, with SEO and GEO optimisation: #1 on Google for its target query, a 100/100 SEO score, and the brand recommended by Gemini AI.",
     "cover_alt": "Noctura Shopify store home page: “The connected sleep patch, for balanced nights”",
-    "seo_title": "Noctura: Shopify store & SEO audit | Case study",
-    "seo_description": "Building the Noctura Shopify store (connected sleep patch, Morocco) and SEO audit: PageSpeed 99/100, SEO 100/100, Screaming Frog and Wappalyzer analysis.",
+    "seo_title": "Noctura: Shopify store, SEO & GEO | Case study",
+    "seo_description": "Noctura Shopify store (connected sleep patch, Morocco): #1 on Google, recommended by Gemini (GEO), PageSpeed 99/100 and SEO 100/100.",
     "context": "Noctura is launching an innovative product in Morocco: an essential-oil sleep patch connected to an app. It needed a store that builds trust and is visible on Google.",
-    "objectives": "- Build a clear, conversion-focused Shopify store.\n- Rank the brand for “connected sleep patch Morocco”.\n- Ensure a fast, solid technical base.",
-    "methodology": "1. Built the store and its pages on Shopify.\n2. Optimised the home page title tag and meta description.\n3. Technical and SEO audit with PageSpeed Insights, Screaming Frog and Wappalyzer.\n4. Set up tracking: GA4, Google Tag Manager, Meta Pixel.",
-    "results": "- **#1 on Google** for “patch de sommeil connecté maroc”\n- **SEO: 100/100** · **Performance: 99/100** (PageSpeed, desktop)\n- **Accessibility: 97/100** · **Best practices: 96/100**"
+    "objectives": "- Build a clear, conversion-focused Shopify store.\n- Rank the brand for “connected sleep patch Morocco”.\n- Ensure a fast, solid technical base.\n- Get recommended by AI assistants (GEO).",
+    "methodology": "1. Built the store and its pages on Shopify.\n2. Optimised the home page title tag and meta description.\n3. Technical and SEO audit with PageSpeed Insights, Screaming Frog and Wappalyzer.\n4. **GEO** (Generative Engine Optimization) so the brand is understood and cited by generative AI.\n5. Set up tracking: GA4, Google Tag Manager, Meta Pixel.",
+    "results": "- **#1 on Google** for “patch de sommeil connecté maroc”\n- **Recommended by Gemini**: asked “I’m looking for a connected sleep patch”, the AI cites Noctura as one of the best-suited options in Morocco, with its price and cash on delivery\n- **SEO: 100/100** · **Performance: 99/100** (PageSpeed, desktop)\n- **Accessibility: 97/100** · **Best practices: 96/100**"
   }
 }
